@@ -1,0 +1,16 @@
+Como remover o Node.js do Windows:
+- Respire fundo.
+- Execute npm cache clean --force
+- Desinstale o node pelo desinstalador de programas
+- Reinicialize (ou você provavelmente conseguirá matar todos os processos relacionados ao nó do Gerenciador de tarefas).
+- Procure essas pastas e remova-as (e seu conteúdo), se ainda houver alguma:
+	C:\Program Files (x86)\Nodejs
+	C:\Program Files\Nodejs
+	C:\Users\{User}\AppData\Roaming\npm(ou %appdata%\npm)
+	C:\Users\{User}\AppData\Roaming\npm-cache(ou %appdata%\npm-cache)
+	C:\Users\{User}\.npmrc(e possivelmente verifique isso sem o .prefixo também)
+	C:\Users\{User}\AppData\Local\Temp\npm-*
+
+- Verifique sua %PATH%variável de ambiente para garantir que não haja referências Nodejs ou npm.
+- Se ainda não tiver sido desinstalado, digite where node no prompt de comando e você verá onde ele reside - exclua tudo.
+- Reinicie a máquina.

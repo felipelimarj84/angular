@@ -1,0 +1,37 @@
+Router
+
+  <router-outlet></router-outlet>
+
+==============================================================================================
+
+Validações Formulários e Campos
+
+Form
+No componente: @ViewChild('formTarefa') formTarefa: NgForm;
+No html: <form #formTarefa="ngForm">
+
+input 
+-> (ngModel)]="tarefa.nome" - Atualiza em tempo real o objeto conforme preenchimento da tela
+-> #nome="ngModel"
+
+div - 
+*ngIf="nome.errors && (nome.dirty || nome.touched)"
+[hidden]="!nome.errors.required"
+[hidden]="!nome.errors.minlength"
+
+submit
+[disabled]="!formTarefa.form.valid"
+(click)="cadastrar()"
+
+a href
+[routerLink]="['/tarefas']
+
+====================================================================================================
+
+import { NgForm } from '@angular/forms'; 
+import { ViewChild } from '@angular/core';
+
+@ViewChild('formTarefa') formTarefa: NgForm;
+
+----------------------------------------------------------------------------------------------------
+$event: any - recebe um evento do nagevador

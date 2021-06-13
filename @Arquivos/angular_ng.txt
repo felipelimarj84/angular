@@ -1,0 +1,28 @@
+npm install - instala todas as dependências
+ng new gerenciador-de-tarefas - criar arquivos angular
+ng serve - iniciar aplicação
+
+Modulos --> Componentes --> Serviços
+
+Módulos -> ng g module calculadora
+Componentes -> ng g component components/calculadora
+Serviços -> ng g service calculadora/services/calculadora
+Diretivas -> ng g directive tarefas/shared/tarefa-concluida 
+
+
+Bootstrap -> npm install --save bootstrap@3
+
+
+const - variaveis que não serão modificadas
+let - variáveis locais
+var - padrão de variáveis
+
+
+
+Atualize o ng cli para a última versão: 
+npm install -g @angular/cli@latest 
+
+
+
+
+

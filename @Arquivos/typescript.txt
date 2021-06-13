@@ -1,0 +1,19 @@
+TYPESCRIPT
+
+npm install -g typescript
+
+tsc nomeApp -> Compilar
+
+tsc -w -> Cria um observador para compilar o arquivo conforme alterações
+
+node app -> executa o arquivo .js
+
+npm init -> criar o package.json
+
+npm install ts-loader webpack --save-dev ->webpack local
+
+npm install -g webpack -> webpack global
+
+npm install typescript --save-dev -> typescript local
+
+webpack -w -> rodar o webpack para gerar arquivos para produção
