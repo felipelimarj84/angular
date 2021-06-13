@@ -1,0 +1,290 @@
+@import '~@angular/material/theming';
+@import './theming';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@include mat-core();
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './themes/default-theme';
+@import './themes/wf-azul-theme.scss';
+@import './themes/wf-verde-theme.scss';
+@import './themes/wf-laranja-theme.scss';
+@import './themes/wf-amarelo-theme.scss';
+@import './themes/wf-vermelho-theme.scss';
+@import './themes/wf-cinza-theme.scss';
+@import './themes/wf-preto-theme.scss';
+@import './themes/wf-roxo-theme.scss';
+@import './themes/material/wf-mat-card.theme.scss';
+
+// Componentes customizados
+
+// ---------------- Core ----------------
+@import 'app/core/components/wf-header/wf-header.component.theme.scss';
+@import 'app/core/containers/layout/wf-layout.component.theme.scss';
+@import 'app/core/components/wf-menu-configuracao/wf-menu-configuracao.component.theme.scss';
+@import 'app/core/components/wf-menu-lateral/wf-menu-lateral.component.theme.scss';
+@import 'app/core/components/wf-menu-notification/wf-menu-notification.component.theme.scss';
+@import 'app/core/containers/configurar-pagina/configurar-pagina.component.theme.scss';
+@import 'app/core/containers/notificacoes/notificacoes.component.theme.scss';
+
+// ---------------- Dashboard ----------------
+@import 'app/dashboard/containers/dashboard/dashboard.component.theme.scss';
+@import 'app/dashboard/components/card-limite-credito/card-limite-credito.component.theme.scss';
+@import 'app/dashboard/components/card-risco-total/card-risco-total.component.theme.scss';
+@import 'app/dashboard/components/card-saldo-operar/card-saldo-operar.component.theme.scss';
+
+// ---------------- Usuario ----------------
+@import 'app/usuario/containers/layout/layout-usuario.component.theme.scss';
+@import 'app/usuario/components/list-usuario/list-usuario.component.theme.scss';
+@import 'app/usuario/components/form-usuario/form-usuario.component.theme.scss';
+
+// ---------------- Borderôs ----------------
+@import 'app/borderos/containers/layout/layout-borderos.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/borderos-propostos.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/nova-proposta/nova-proposta.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/importa-titulos/importa-titulos.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/importa-titulos-xml/importa-titulos-xml.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/itens-menu.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/titulos/titulos.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/titulos/incluir-cheque/incluir-cheque.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/titulos/incluir-duplicata/incluir-duplicata.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/liberacoes/liberacoes.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/liberacoes/incluir-cc/incluir-cc.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/liberacoes/incluir-cheque-lib/incluir-cheque-lib.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/liberacoes/incluir-doc/incluir-doc.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/liberacoes/incluir-especie/incluir-especie.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/liberacoes/incluir-ted/incluir-ted.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/imprime-duplicatas/imprime-duplicatas.component.theme.scss';
+@import 'app/borderos/components/borderos-propostos/itens-menu/enviar-nfe/enviar-nfe.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/borderos-consulta.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/itens-menu-consulta/itens-menu-consulta.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/itens-menu-consulta/relatorio-aditivo/relatorio-aditivo.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/itens-menu-consulta/relatorio-bordero/relatorio-bordero.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/itens-menu-consulta/nota-promissoria/nota-promissoria.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/itens-menu-consulta/recibo-regresso/recibo-regresso.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/itens-menu-consulta/imprime-duplicatas-consulta/imprime-duplicatas-consulta.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/itens-menu-consulta/carta-sacado/carta-sacado.component.theme.scss';
+@import 'app/borderos/components/borderos-consulta/itens-menu-consulta/carta-sacado/imprime-carta-sacado/imprime-carta-sacado.component.theme.scss';
+
+// ---------------- Operações  ----------------
+@import 'app/operacoes/doc-pendentes/containers/layout/layout-doc-pendentes.component.theme.scss';
+@import 'app/operacoes/liberacoes/components/home/home.component.theme.scss';
+@import 'app/operacoes/liberacoes/components/lib-incluir-cheque/lib-incluir-cheque.component.theme.scss';
+@import 'app/operacoes/liberacoes/components/lib-incluir-doc/lib-incluir-doc.component.theme.scss';
+@import 'app/operacoes/liberacoes/components/lib-incluir-especie/lib-incluir-especie.component.theme.scss';
+@import 'app/operacoes/liberacoes/components/lib-incluir-ted/lib-incluir-ted.component.theme.scss';
+@import 'app/operacoes/liberacoes/components/lib-incluir-cc/lib-incluir-cc.component.theme.scss';
+
+// ---------------- Títulos ----------------
+@import 'app/titulos/consultas/containers/layout/layout-consultas.component.theme.scss';
+@import 'app/titulos/cobrancas/containers/layout/layout-cobrancas.component.theme.scss';
+@import 'app/titulos/boletos/containers/layout/layout-boletos.component.theme.scss';
+@import 'app/titulos/pagamentos/containers/layout/layout-pagamentos.component.theme.scss';
+@import 'app/titulos/extrato/containers/layout/layout-extrato.component.theme.scss';
+@import 'app/titulos/consultas/components/home-consultas/home-consultas.component.theme.scss';
+@import 'app/titulos/consultas/components/filtrar-consultas/filtrar-consultas.component.theme.scss';
+@import 'app/titulos/cobrancas/components/home-cobrancas/home-cobrancas.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/itens-novas-instrucoes.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/prorrogar-ni/prorrogar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/abater-ni/abater-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/cancelar-ni/cancelar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/protestar-ni/protestar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/sustar-ni/sustar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/antecipacao-ni/antecipacao-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/baixar-ni/baixar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/retirada-ni/retirada-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/prorrogar-ni/filtrar-prorrogar-ni/filtrar-prorrogar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/abater-ni/filtros-abater-ni/filtros-abater-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/cancelar-ni/filtros-cancelar-ni/filtros-cancelar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/protestar-ni/filtros-protestar-ni/filtros-protestar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/sustar-ni/filtros-sustar-ni/filtros-sustar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/antecipacao-ni/filtros-antecipacao-ni/filtros-antecipacao-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/baixar-ni/filtros-baixar-ni/filtros-baixar-ni.component.theme.scss';
+@import 'app/titulos/cobrancas/components/itens-novas-instrucoes/retirada-ni/filtros-retirada-ni/filtros-retirada-ni.component.theme.scss';
+@import 'app/titulos/boletos/components/home-boletos/home-boletos.component.theme.scss';
+@import 'app/titulos/boletos/components/filtrar-boletos/filtrar-boletos.component.theme.scss';
+@import 'app/titulos/pagamentos/components/home-pagamentos/home-pagamentos.component.theme.scss';
+@import 'app/titulos/extrato/components/home-extrato/home-extrato.component.theme.scss';
+
+// ---------------- Cadastro ----------------
+@import 'app/cadastro/novo/containers/layout/layout-novo.component.theme.scss';
+@import 'app/cadastro/renovacao/containers/layout/layout-renovacao.component.theme.scss';
+@import 'app/cadastro/documentacao/containers/layout/layout-documentacao.component.theme.scss';
+@import 'app/cadastro/contratos/containers/layout/layout-contratos.component.theme.scss';
+@import 'app/cadastro/contratos/components/home-contratos/home-contratos.component.theme.scss';
+@import 'app/cadastro/contratos/components/contratos-fidc/contratos-fidc.component.theme.scss';
+@import 'app/cadastro/contratos/components/contratos-padrao/contratos-padrao.component.theme.scss';
+
+// ---------------- Segurança ----------------
+@import 'app/seguranca/containers/login/login.component.theme.scss';
+
+@mixin custom-components-theme($theme) {
+	@include wf-mat-card-theme($theme);
+	@include wf-header-component-theme($theme);
+	@include wf-menu-lateral-component-theme($theme);
+	@include wf-menu-configuracao-component-theme($theme);
+	@include wf-menu-notification-component-theme($theme);
+	@include wf-layout-component-theme($theme);
+	@include dashboard-component-theme($theme);
+	@include card-limite-credito-component-theme($theme);
+	@include card-risco-total-component-theme($theme);
+	@include card-saldo-operar-component-theme($theme);
+	@include configurar-pagina-component-theme($theme);
+	@include notificacoes-component-theme($theme);
+	@include list-usuario-component-theme($theme);
+	@include layout-usuario-component-theme($theme);
+	@include form-usuario-component-theme($theme);
+	@include layout-borderos-component-theme($theme);
+	@include nova-proposta-component-theme($theme);
+	@include importa-titulos-component-theme($theme);
+	@include importa-titulos-xml-component-theme($theme);
+	@include borderos-propostos-component-theme($theme);
+	@include itens-menu-component-theme($theme);
+	@include titulos-component-theme($theme);
+	@include incluir-duplicata-component-theme($theme);
+	@include incluir-cheque-component-theme($theme);
+	@include liberacoes-component-theme($theme);
+	@include incluir-cheque-lib-component-theme($theme);
+	@include incluir-doc-component-theme($theme);
+	@include incluir-especie-component-theme($theme);
+	@include incluir-ted-component-theme($theme);
+	@include incluir-cc-component-theme($theme);
+	@include imprime-duplicatas-component-theme($theme);
+	@include enviar-nfe-component-theme($theme);
+	@include layout-doc-pendentes-component-theme($theme);
+	@include layout-consultas-component-theme($theme);
+	@include layout-cobrancas-component-theme($theme);
+	@include layout-boletos-component-theme($theme);
+	@include layout-pagamentos-component-theme($theme);
+	@include layout-extrato-component-theme($theme);
+	@include login-component-theme($theme);
+	@include home-liberacoes-component-theme($theme);
+	@include lib-incluir-cheque-component-theme($theme);
+	@include lib-incluir-doc-component-theme($theme);
+	@include lib-incluir-especie-component-theme($theme);
+	@include lib-incluir-ted-component-theme($theme);
+	@include lib-incluir-cc-component-theme($theme);
+	@include borderos-consulta-component-theme($theme);
+	@include itens-menu-consulta-component-theme($theme);
+	@include relatorio-aditivo-component-theme($theme);
+	@include relatorio-bordero-component-theme($theme);
+	@include nota-promissoria-component-theme($theme);
+	@include recibo-regresso-component-theme($theme);
+	@include imprime-duplicatas-consulta-component-theme($theme);
+	@include carta-sacado-component-theme($theme);
+	@include imprime-carta-sacado-component-theme($theme);
+	@include home-consultas-component-theme($theme);
+	@include filtrar-consultas-component-theme($theme);
+	@include home-cobrancas-component-theme($theme);
+	@include itens-novas-intrucoes-component-theme($theme);
+	@include prorrogar-ni-component-theme($theme);
+	@include abater-ni-component-theme($theme);
+	@include cancelar-ni-component-theme($theme);
+	@include protestar-ni-component-theme($theme);
+	@include sustar-ni-component-theme($theme);
+	@include antecipacao-ni-component-theme($theme);
+	@include baixar-ni-component-theme($theme);
+	@include retirada-ni-component-theme($theme);
+	@include filtrar-prorrogar-ni-component-theme($theme);
+	@include filtros-abater-ni-component-theme($theme);
+	@include filtros-cancelar-ni-component-theme($theme);
+	@include filtros-protestar-ni-component-theme($theme);
+	@include filtros-sustar-ni-component-theme($theme);
+	@include filtros-antecipacao-ni-component-theme($theme);
+	@include filtros-baixar-ni-component-theme($theme);
+	@include filtros-retirada-ni-component-theme($theme);
+	@include home-boletos-component-theme($theme);
+	@include filtrar-boletos-component-theme($theme);
+	@include home-pagamentos-component-theme($theme);
+	@include home-extrato-component-theme($theme);
+	@include home-contratos-component-theme($theme);
+	@include contratos-fidc-component-theme($theme);
+	@include contratos-padrao-component-theme($theme);
+}
+
+.default-theme {
+	@include angular-material-theme($wf-theme);
+	@include custom-components-theme($wf-theme);
+}
+
+.wf-azul-theme {
+	@include angular-material-theme($wf-azul-theme);
+	@include custom-components-theme($wf-azul-theme);
+}
+
+.wf-verde-theme {
+	@include angular-material-theme($wf-verde-theme);
+	@include custom-components-theme($wf-verde-theme);
+}
+
+.wf-laranja-theme {
+	@include angular-material-theme($wf-laranja-theme);
+	@include custom-components-theme($wf-laranja-theme);
+}
+
+.wf-amarelo-theme {
+	@include angular-material-theme($wf-amarelo-theme);
+	@include custom-components-theme($wf-amarelo-theme);
+}
+
+.wf-vermelho-theme {
+	@include angular-material-theme($wf-vermelho-theme);
+	@include custom-components-theme($wf-vermelho-theme);
+}
+
+.wf-cinza-theme {
+	@include angular-material-theme($wf-cinza-theme);
+	@include custom-components-theme($wf-cinza-theme);
+}
+
+.wf-preto-theme {
+	@include angular-material-theme($wf-preto-theme);
+	@include custom-components-theme($wf-preto-theme);
+}
+
+.wf-roxo-theme {
+	@include angular-material-theme($wf-roxo-theme);
+	@include custom-components-theme($wf-roxo-theme);
+}
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.mat-menu-panel {
+	max-width: none !important;
+	max-height: none !important;
+	overflow: initial !important;
+}
+
+snack-bar-container.success {
+	background-color: #4cd964 !important;
+	color: white !important;
+}
+
+snack-bar-container.error {
+	border: 1px solid #ff7171 !important;
+	background: #ff71711a 0% 0% no-repeat padding-box !important;
+	padding: 20px 30px 20px 20px !important;
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+}
+
+snack-bar-container.notification simple-snack-bar {
+	font-size: 13px !important;
+	font-size: 13px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+	color: #ff7171;
+	text-align: left;
+}
+.mat-menu-transparent {
+	background: transparent !important;
+	box-shadow: none !important;
+}

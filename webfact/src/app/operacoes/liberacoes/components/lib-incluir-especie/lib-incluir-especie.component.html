@@ -1,0 +1,25 @@
+<div fxLayout="column" class="div-geral">
+	<div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+		<span class="txt-titulo color-primary">Incluir Espécie</span>
+		<button mat-button class="btn-close" (click)="close()">
+			<mat-icon>close</mat-icon>
+			<span class="ml-5">Fechar</span>
+		</button>
+	</div>
+	<div fxLayout="column" fxLayoutAlign="center end" fxFlexFill class="div-tab">
+		<div fxLayout="column" class="div-content" fxFlexFill>
+			<mat-form-field>
+				<mat-label class="label color-primary-300">Valor</mat-label>
+				<input matInput value="" />
+			</mat-form-field>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="30px" class="mt-20">
+			<button mat-button class="btn-cancelar">
+				<span>Cancelar</span>
+			</button>
+			<button mat-button class="btn-salvar">
+				<span>Salvar</span>
+			</button>
+		</div>
+	</div>
+</div>

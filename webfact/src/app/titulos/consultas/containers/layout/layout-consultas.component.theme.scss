@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+
+@mixin layout-consultas-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	app-layout-consultas {
+		.color-primary {
+			color: mat-color($primary);
+		}
+
+		.color-primary-300 {
+			color: mat-color($primary, 300);
+		}
+	}
+}

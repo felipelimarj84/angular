@@ -1,0 +1,84 @@
+<mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+	<mat-progress-spinner color="primary" mode="indeterminate">
+	</mat-progress-spinner>
+</mat-card>
+
+
+<div class="dashboard" *ngIf="(dadosDashBoards$ | async) as dashBoards">
+
+	<div *ngIf="!isLoading">
+
+
+		<div fxLayout="row" layout-margin>
+			<span class="txt-color-primary txt-titulo">Limite e Saldo para Operar</span>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="5px">
+			<app-card-limite-credito [dados]="dadosLimiteCredito" fxLayoutAlign="stretch"></app-card-limite-credito>
+
+			<app-card-risco-total [dados]="dadosRiscoTotal" fxLayoutAlign="stretch">
+			</app-card-risco-total>
+
+			<app-card-saldo-operar [dados]="dadosSaldoOperar" fxLayoutAlign="stretch"></app-card-saldo-operar>
+		</div>
+
+		<div class="charts-dashboard">
+			<div fxLayout="row">
+				<div [fxFlex]="49.5" class="column-graphic">
+					<div fxLayout="row" layout-margin>
+						<a class="txt-color-primary txt-titulo">Top 10 Grupo - Raiz - Sacado</a>
+					</div>
+
+
+					<div class="chart-wrapper">
+						<canvas baseChart width="150px" [datasets]="barChartData" [labels]="barChartLabels"
+							[options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend"
+							[chartType]="barChartType">
+						</canvas>
+					</div>
+				</div>
+
+				<div [fxFlex]="49.5">
+					<div fxLayout="row" layout-margin>
+						<a class="txt-color-primary txt-titulo">Top 10 Sacados</a>
+					</div>
+
+					<div class="chart-wrapper">
+						<canvas baseChart [datasets]="barChartDataSacado" [labels]="barChartLabelsSacado"
+							[options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend"
+							[chartType]="barChartType">
+						</canvas>
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<div fxLayout="row" fxLayoutGap="20px" class="charts-dashboard">
+				<div [fxFlex]="50">
+					<div fxLayout="row" layout-margin>
+						<a class="txt-color-primary txt-titulo">A vencer (Faixas Por Dia)</a>
+					</div>
+
+					<div class="chart-wrapper">
+						<canvas baseChart [data]="pieChartDataAVencer" [labels]="pieChartLabelsAVencer"
+							[chartType]="pieChartType" [colors]="pieChartColors">
+						</canvas>
+					</div>
+				</div>
+
+				<div [fxFlex]="50">
+					<div fxLayout="row" layout-margin>
+						<a class="txt-color-primary txt-titulo">Vencidos (Faixas Por Dia)</a>
+					</div>
+					<div class="chart-wrapper">
+						<canvas baseChart [data]="pieChartDataVencido" [labels]="pieChartLabelsVencido"
+							[chartType]="pieChartType" [colors]="pieChartColors">
+						</canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

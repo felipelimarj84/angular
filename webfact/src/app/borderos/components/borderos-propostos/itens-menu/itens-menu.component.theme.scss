@@ -1,0 +1,39 @@
+@import '~@angular/material/theming';
+
+@mixin itens-menu-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	app-itens-menu {
+		.color-primary {
+			color: mat-color($primary);
+		}
+
+		.color-primary-300 {
+			color: mat-color($primary, 300);
+		}
+
+		.mat-tab-label-content {
+			color: mat-color($primary, 200);
+			font-size: 18px;
+			font-weight: bold;
+			letter-spacing: 0;
+			opacity: 1;
+		}
+
+		.mat-tab-label-active {
+			.mat-tab-label-content {
+				color: mat-color($primary, 400);
+			}
+		}
+
+		.mat-tab-label {
+			width: 100%;
+		}
+
+		.mat-tab-group {
+			width: 100%;
+		}
+	}
+}

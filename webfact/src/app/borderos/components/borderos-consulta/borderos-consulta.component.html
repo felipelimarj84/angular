@@ -1,0 +1,93 @@
+<div>
+	<div fxLayout="column" fxFlexFill class="content">
+		<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="15px">
+			<mat-form-field>
+				<mat-label class="label color-primary-300">Nº Borderô (BRANCO=Todos)</mat-label>
+				<input matInput #bordero value="" />
+			</mat-form-field>
+			<button mat-button id="txtBordero" (click)="obterBorderos(bordero.value)" class="btn-search color-primary border-primary-200">
+				<span>OK</span>
+			</button>
+		</div>
+
+		<div  *ngIf="(dadosListaBordero$ | async)" fxLayout="row" fxLayoutAlign="center center">
+			<table *ngIf="dataSource" mat-table [dataSource]="dataSource"  matSort>
+				<ng-container matColumnDef="data_cadastro">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+						Data
+					</th>
+					<td mat-cell *matCellDef="let element">
+						{{ element.data_cadastro | date: 'dd/MM/yyyy' }}
+					</td>
+				</ng-container>
+
+				<ng-container matColumnDef="bordero">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+						Borderô
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.bordero }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="vtt">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+						Valor Total
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.vtt | currency: 'BRL' }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="tipoextenso">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+						Tipo Operação
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.tipoextenso }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="options">
+					<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary"></th>
+					<td mat-cell *matCellDef="let element">
+						<mat-icon [matMenuTriggerFor]="menuItens" class="icon">more_vert</mat-icon>
+					</td>
+				</ng-container>
+
+				<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+				<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+			</table>
+		</div>
+
+		<div fxLayout="row" fxLayoutAlign="end center" class="div-paginator">
+			<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+		</div>
+	</div>
+
+	<mat-menu #menuItens="matMenu" class="mat-menu-transparent">
+		<div fxLayout="row" fxLayoutAlign="center center" [class]="theme$ | async">
+			<div fxLayout="column" fxFlex="190px" fxLayoutAlign="center center" class="arrow_box">
+				<div fxLayout="column" fxLayoutAlign="center start" fxFlexFill>
+					<span class="txt-itens color-primary-400" routerLink="itens-menu-consulta/0"
+						>Relatório Aditivo</span
+					>
+					<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+					<span class="txt-itens color-primary-400" routerLink="itens-menu-consulta/1"
+						>Relatório Borderô</span
+					>
+					<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+					<span class="txt-itens color-primary-400" routerLink="itens-menu-consulta/2"
+						>Carta Sacado</span
+					>
+					<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+					<span class="txt-itens color-primary-400" routerLink="itens-menu-consulta/3"
+						>Nota Promissória</span
+					>
+					<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+					<span class="txt-itens color-primary-400" routerLink="itens-menu-consulta/4"
+						>Recibo de Regresso</span
+					>
+					<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+					<span class="txt-itens color-primary-400" routerLink="itens-menu-consulta/5"
+						>Impressão de Duplicatas</span
+					>
+				</div>
+			</div>
+		</div>
+	</mat-menu>
+</div>

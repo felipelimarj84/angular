@@ -1,0 +1,33 @@
+.img-icon {
+	height: 40px;
+	width: 40px;
+	color: #ffffff;
+	opacity: 1;
+	margin: 0 auto;
+	margin-top: 12px;
+}
+
+.title-card {
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0;
+	opacity: 1;
+	padding-top: 8px;
+	color: #ffffff;
+	opacity: 1;
+}
+
+.title-card.active {
+	font-weight: bold;
+}
+
+.btn.active {
+	background-color: #ffffff !important;
+}
+
+.btn {
+	width: 100px;
+	height: 100px;
+	border-radius: 0;
+}

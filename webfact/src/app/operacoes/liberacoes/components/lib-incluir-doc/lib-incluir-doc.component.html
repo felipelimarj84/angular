@@ -1,0 +1,168 @@
+<div fxLayout="column" class="div-geral">
+	<div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+		<span class="txt-titulo color-primary">Incluir DOC</span>
+		<button mat-button class="btn-close" (click)="close()">
+			<mat-icon>close</mat-icon>
+			<span class="ml-5">Fechar</span>
+		</button>
+	</div>
+	<div fxLayout="row" fxLayoutAlign="center center" class="div-tab">
+		<div fxLayout="column" class="div-content">
+			<div fxLayout="column">
+				<div fxLayout="row">
+					<div fxLayout="column" fxFlex="50">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Valor</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row">
+					<div fxLayout="column" fxFlex="100">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">CNPJ</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row">
+					<div fxLayout="column" fxFlex="100">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Correntista</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxLayoutAlign="center center">
+						<button
+							mat-button
+							class="btn-filtrar color-primary border-primary-200 background-primary-50"
+							(click)="aplicarFiltro(filtrar)"
+						>
+							<span class="txt-btn">Filtrar</span>
+							<mat-icon svgIcon="filtros" class="icon"></mat-icon>
+						</button>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="33">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Banco</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="33">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Agência</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="33">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Conta</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="20px" *ngIf="filtrar">
+				<div fxLayout="column" fxLayoutAlign="center space-between" fxFlex="50" class="mb-5">
+					<span class="txt-item color-primary">Ordenar por:</span>
+				</div>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="15px" *ngIf="filtrar">
+				<div fxLayout="column" fxLayoutAlign="center space-between" fxFlex="100">
+					<mat-card class="border-primary-200 background-primary-50" fxFlex="0 0 50px">
+						<div fxLayout="row">
+							<mat-radio-group
+								fxLayout="row"
+								fxLayoutAlign="space-between center"
+								fxFlexFill
+								color="primary"
+							>
+								<mat-radio-button value="1" class="txt-item bold color-primary-300"
+									>Correntista</mat-radio-button
+								>
+								<mat-radio-button value="2" class="txt-item bold color-primary-300"
+									>Banco</mat-radio-button
+								>
+								<mat-radio-button value="3" class="txt-item bold color-primary-300"
+									>Agência</mat-radio-button
+								>
+								<mat-radio-button value="4" class="txt-item bold color-primary-300"
+									>Conta</mat-radio-button
+								>
+							</mat-radio-group>
+						</div>
+					</mat-card>
+				</div>
+			</div>
+			<div fxLayout="column" fxLayoutAlign="center end" *ngIf="filtrar">
+				<table mat-table [dataSource]="dataSource">
+					<ng-container matColumnDef="correntista">
+						<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+							Correntista
+						</th>
+						<td mat-cell *matCellDef="let element">{{ element.correntista }}</td>
+					</ng-container>
+
+					<ng-container matColumnDef="banco">
+						<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+							Banco
+						</th>
+						<td mat-cell *matCellDef="let element">{{ element.banco }}</td>
+					</ng-container>
+
+					<ng-container matColumnDef="agencia">
+						<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+							Agência
+						</th>
+						<td mat-cell *matCellDef="let element">{{ element.agencia }}</td>
+					</ng-container>
+
+					<ng-container matColumnDef="conta">
+						<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+							Conta
+						</th>
+						<td mat-cell *matCellDef="let element">{{ element.conta }}</td>
+					</ng-container>
+
+					<ng-container matColumnDef="cnpj">
+						<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">CNPJ</th>
+						<td mat-cell *matCellDef="let element">{{ element.cnpj }}</td>
+					</ng-container>
+
+					<ng-container matColumnDef="options">
+						<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary"></th>
+						<td mat-cell *matCellDef="let element">
+							<mat-icon
+								[svgIcon]="element.options ? 'success' : 'success-cinza'"
+								class="icon-table"
+							></mat-icon>
+						</td>
+					</ng-container>
+
+					<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+					<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+				</table>
+
+				<div fxLayout="row" fxLayoutAlign="end center" class="div-paginator mb-20">
+					<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+				</div>
+			</div>
+
+			<div fxLayout="row">
+				<mat-checkbox class="txt-chk color-primary-300" color="primary"
+					>Incluir dados do favorecido caso não exista?
+				</mat-checkbox>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="30px" class="mt-20">
+				<button mat-button class="btn-cancelar">
+					<span>Cancelar</span>
+				</button>
+				<button mat-button class="btn-salvar">
+					<span>Salvar</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

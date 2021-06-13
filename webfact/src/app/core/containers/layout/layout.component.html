@@ -1,0 +1,74 @@
+<div fxLayout="column" fxFlexFill [class]="theme$ | async">
+	<div fxLayout="row" fxLayoutAlign="center" fxFlex="0 0 85px" fxFlexFill>
+		<app-wf-header
+			fxLayout="row"
+			fxLayoutAlign="start center"
+			fxFlexFill
+			class="header"
+			(onLoginClickEvent)="onLoginClick()"
+			[isAuthenticated]="isAuthenticated$ | async"
+		></app-wf-header>
+	</div>
+	<div fxLayout="row" fxFlex="0 0 calc(100vh - 85px)" class="conteudo">
+		<div fxFlex="100px" fxLayoutAlign="none" class="div-lateral" fxFlexFill>
+			<app-wf-menu-lateral
+				fxLayout="column"
+				fxLayoutAlign="start start"
+				[botoes]="itensMenu"
+			></app-wf-menu-lateral>
+		</div>
+		<div
+			fxLayout="row"
+			*ngIf="!sidenav.opened && rotas && rotas.length > 0"
+			fxLayoutAlign="center center"
+			class="background-primary-50"
+		>
+			<div fxFlex="20px" fxFlexFill class="efeito-sub-menu"></div>
+			<div fxLayout="row" xLayoutAlign="center center">
+				<div (click)="sidenav.toggle()" fxLayoutAlign="center center" class="botao-sub-menu">
+					<div *ngIf="!sidenav.opened" class="seta-direita"></div>
+				</div>
+			</div>
+		</div>
+		<div fxFlex="calc(100vh - 100px)" fxFlexFill>
+			<mat-sidenav-container class="example-container" fxFlexFill>
+				<mat-sidenav
+					#sidenav
+					mode="side"
+					class="border-primary-50"
+					[ngClass]="{ 'hidden-subMenu': subMenu$ | async }"
+				>
+					<div fxLayout="row" fxFlex="100%">
+						<mat-list class="mat-list-custom no-padding">
+							<mat-list-item
+								class="txt-itens color-primary"
+								*ngFor="let rota of rotas"
+								[routerLink]="rota.routerLink"
+								routerLinkActive="background-primary-50 router-active"
+							>
+								{{ rota.title }}
+								<mat-divider [inset]="true"></mat-divider
+							></mat-list-item>
+						</mat-list>
+
+						<div class="background-primary-50" fxLayoutAlign="center center">
+							<div
+								(click)="sidenav.toggle()"
+								fxLayoutAlign="center center"
+								class="botao-sub-menu"
+							>
+								<div *ngIf="sidenav.opened" class="seta-esquerda"></div>
+							</div>
+						</div>
+					</div>
+				</mat-sidenav>
+
+				<mat-sidenav-content class="div-router background-primary-50">
+					<div fxFlex="100%">
+						<router-outlet></router-outlet>
+					</div>
+				</mat-sidenav-content>
+			</mat-sidenav-container>
+		</div>
+	</div>
+</div>

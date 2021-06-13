@@ -1,0 +1,81 @@
+<div fxLayout="column" fxFlexFill class="content">
+	<div class="div-interna">
+		<mat-card class="card-alert mb-20" fxLayout="row" fxLayoutAlign="center center">
+			<div fxLayout="row" fxLayoutAlign="center center" fxFlexFill>
+				<span class="txt-alert">Necessário Chrome ou Internet Explorer 10 (ou superior)</span>
+			</div>
+			<div fxLayout="row">
+				<mat-icon svgIcon="fechar"></mat-icon>
+			</div>
+		</mat-card>
+
+		<div fxLayout="column">
+			<div
+				fxLayout="row"
+				fxLayoutAlign="space-between end"
+				fxFlexFill
+				class="pb-5 border-bottom-primary-200"
+			>
+				<span class="txt-item normal color-primary-300">Selecione um ou mais arquivos:</span>
+				<button mat-button class="btn-arquivo color-primary background-primary-50 border-primary-200">
+					<span>Selecione</span>
+				</button>
+			</div>
+			<span class="txt-exemplo pt-5 mb-20"
+				>Arquivos permitidos: xml. Tamanho máximo do arquivo: 4Mb</span
+			>
+		</div>
+
+		<div fxLayout="column" class="mb-20">
+			<div fxLayout="row" fxLayoutAlign="space-between end" fxFlexFill>
+				<span class="txt-subtitulo color-primary-300">Arquivos Salvos</span>
+				<button
+					mat-button
+					class="btn-verifica color-primary background-primary-50 border-primary-200"
+				>
+					<span>Gravar Arquivos</span>
+				</button>
+			</div>
+		</div>
+
+		<div fxLayout="column" fxLayoutAlign=" stretch" class="mb-20">
+			<mat-card class="border-primary-200 p-20">
+				<div fxLayout="column">
+					<div
+						fxLayout="row"
+						fxLayoutAlign="space-between start"
+						fxFlexFill
+						class="pb-5 mb-5 border-bottom-primary-200"
+					>
+						<span class="txt-item bold color-primary-300 pt-15">Arquivo1.xml</span>
+						<button mat-icon-button class="btn-padrao excluir" title="Excluir">
+							<mat-icon class="icon">delete</mat-icon>
+						</button>
+					</div>
+				</div>
+				<div fxLayout="column">
+					<div
+						fxLayout="row"
+						fxLayoutAlign="space-between start"
+						fxFlexFill
+						class="pb-5 mb-5 border-bottom-primary-200"
+					>
+						<span class="txt-item bold color-primary-300 pt-15">Arquivo1.xml</span>
+						<button mat-icon-button class="btn-padrao excluir" title="Excluir">
+							<mat-icon class="icon">delete</mat-icon>
+						</button>
+					</div>
+				</div>
+			</mat-card>
+		</div>
+
+		<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="30px">
+			<button mat-button class="btn-cancelar">
+				<span>Cancelar</span>
+			</button>
+			<button mat-button class="btn-salvar">
+				<span>Salvar</span>
+			</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,77 @@
+<div class="content" *ngIf="(dadosUsuario$ | async) as dadosUsuario">
+	<div fxLayout="column" fxLayoutAlign="center start">
+		<span class="txt-titulo color-primary">Configuração de Página</span>
+	</div>
+
+	<div fxLayout="row" fxFlexFill fxLayoutGap="40px" class="div-conteudo">
+		<div fxLayout="column" fxLayoutAlign="center space-between" fxFlex="50%">
+			<div fxLayout="column" fxLayoutAlign="center start" fxFlex="50%">
+				<span class="txt-subTitulo color-primary-300">Faça Upload da logo de sua empresa</span>
+			</div>
+
+			<mat-card class="border-card">
+				<mat-card-content>
+					<div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+
+						<div *ngIf="dadosImagem$ | async as imagem">
+
+							<div *ngIf="imagem">
+								<img [src]="imagem">
+							</div>
+
+							<div fxLayout="column" fxLayoutAlign="center center">
+								<span class="txt-label color-primary">Logo incluída em</span>
+								<span class="txt-label color-primary"> {{ dadosUsuario.datalogo | date: 'dd/MM/yyyy' }}
+								</span>
+							</div>
+						</div>
+
+						<button mat-button class="btn-config btn-background-primary-300" (click)="fileType.click()">
+							<mat-icon svgIcon="logomarca" class="img-icon"></mat-icon>
+							<span>Incluir Logomarca</span>
+						</button>
+
+						<input accept="image/*" type="file" id="file" (change)="onChange($event)" hidden="true" #fileType />
+
+					</div>
+				</mat-card-content>
+			</mat-card>
+		</div>
+
+		<div fxLayout="column" fxLayoutAlign="center space-between" fxFlex="50%">
+			<div fxLayout="column" fxLayoutAlign="center start" fxFlex="50%">
+				<span class="txt-subTitulo color-primary-300">Defina a cor do seu sistema</span>
+			</div>
+			<mat-card class="mat-card-color-primary-50">
+				<mat-card-content>
+					<div fxLayout="row" fxLayoutAlign="space-between center">
+						<div mat-card-avatar class="img-avatar azul" title="azul"
+							[ngClass]="{ shadow: temaAtual === 'WF-AZUL-THEME' }"
+							(click)="onThemeSelect('WF-AZUL-THEME')"></div>
+						<div mat-card-avatar class="img-avatar verde" title="verde"
+							[ngClass]="{ shadow: temaAtual === 'WF-VERDE-THEME' }"
+							(click)="onThemeSelect('WF-VERDE-THEME')"></div>
+						<div mat-card-avatar class="img-avatar laranja" title="laranja"
+							[ngClass]="{ shadow: temaAtual === 'WF-LARANJA-THEME' }"
+							(click)="onThemeSelect('WF-LARANJA-THEME')"></div>
+						<div mat-card-avatar class="img-avatar amarelo" title="amarelo"
+							[ngClass]="{ shadow: temaAtual === 'WF-AMARELO-THEME' }"
+							(click)="onThemeSelect('WF-AMARELO-THEME')"></div>
+						<div mat-card-avatar class="img-avatar vermelho" title="vermelho"
+							[ngClass]="{ shadow: temaAtual === 'WF-VERMELHO-THEME' }"
+							(click)="onThemeSelect('WF-VERMELHO-THEME')"></div>
+						<div mat-card-avatar class="img-avatar cinza" title="cinza"
+							[ngClass]="{ shadow: temaAtual === 'WF-CINZA-THEME' }"
+							(click)="onThemeSelect('WF-CINZA-THEME')"></div>
+						<div mat-card-avatar class="img-avatar preto" title="preto"
+							[ngClass]="{ shadow: temaAtual === 'WF-PRETO-THEME' }"
+							(click)="onThemeSelect('WF-PRETO-THEME')"></div>
+						<div mat-card-avatar class="img-avatar roxo" title="roxo"
+							[ngClass]="{ shadow: temaAtual === 'WF-ROXO-THEME' }"
+							(click)="onThemeSelect('WF-ROXO-THEME')"></div>
+					</div>
+				</mat-card-content>
+			</mat-card>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,92 @@
+<div class="content">
+	<div fxLayout="row" fxLayoutAlign="end center" fxFlexFill>
+		<button mat-button class="btn-close" (click)="close()">
+			<mat-icon>close</mat-icon>
+			<span class="ml-5">Fechar</span>
+		</button>
+	</div>
+	<div fxLayout="row" fxLayoutAlign="center center" class="div-table">
+		<table mat-table [dataSource]="dataSource">
+			<ng-container matColumnDef="titulo">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Título
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.titulo }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="valor">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Valor
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.valor }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="sacadoEmitente">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Sacado/Emitente
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.sacadoEmitente }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="vencOriginal">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Venc. Original
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.vencOriginal }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="vencAtual">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Venc. Atual
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.vencAtual }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="sequencial">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Sequencial
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.sequencial }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="tipoOperacao">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Tipo de Operação
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.tipoOperacao }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="situacaoBoleto">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Situação Boleto
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.situacaoBoleto }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="situacao">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Situação
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.situacao }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="options">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary"></th>
+				<td mat-cell *matCellDef="let element">
+					<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+						<button
+							mat-button
+							title="Prorrogar"
+							class="btn-padrao color-primary-400 border-primary-400"
+						>
+							<span>Sustar Protesto</span>
+						</button>
+					</div>
+				</td>
+			</ng-container>
+
+			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+		</table>
+	</div>
+</div>

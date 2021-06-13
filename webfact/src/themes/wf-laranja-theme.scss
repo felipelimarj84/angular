@@ -1,0 +1,5 @@
+$wf-laranja-primary: mat-palette($mat-wf-laranja);
+$wf-laranja-accent: mat-palette($mat-light-blue);
+$wf-laranja-warn: mat-palette($mat-red, 600);
+
+$wf-laranja-theme: mat-light-theme($wf-laranja-primary, $wf-laranja-accent, $wf-laranja-warn);

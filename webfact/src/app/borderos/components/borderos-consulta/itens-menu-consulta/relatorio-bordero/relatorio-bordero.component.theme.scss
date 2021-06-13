@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+@mixin relatorio-bordero-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	app-relatorio-bordero {
+		.color-primary {
+			color: mat-color($primary);
+		}
+
+		.color-primary-300 {
+			color: mat-color($primary, 300);
+		}
+
+		.border-primary-200 {
+			border: 1px solid mat-color($primary, 200);
+		}
+	}
+}

@@ -1,0 +1,5 @@
+$wf-verde-primary: mat-palette($mat-wf-verde);
+$wf-verde-accent: mat-palette($mat-light-blue);
+$wf-verde-warn: mat-palette($mat-red, 600);
+
+$wf-verde-theme: mat-light-theme($wf-verde-primary, $wf-verde-accent, $wf-verde-warn);

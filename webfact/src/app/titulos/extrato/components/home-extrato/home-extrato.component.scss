@@ -1,0 +1,120 @@
+.content {
+	padding: 15px;
+
+	.btn-new {
+		height: 43px;
+		opacity: 1;
+		font-size: 12px;
+		letter-spacing: 0;
+		line-height: 0;
+	}
+
+	.btn-filtrar {
+		border-radius: 6px;
+		width: 131px;
+		height: 43px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 0;
+		margin-bottom: 10px;
+		color: #fff;
+	}
+
+	.btn-padrao {
+		height: 32px;
+		width: 32px;
+		line-height: 0;
+		background-color: #fff;
+	}
+
+	.icon-itens {
+		width: 15px;
+	}
+
+	.txt-chk {
+		font-size: 14px;
+	}
+
+	.txt-select {
+		font-size: 14px;
+	}
+
+	.span-txt {
+		font-size: 14px;
+	}
+
+	.icon {
+		width: 16px;
+		margin-right: 10px;
+	}
+
+	.icon-periodo {
+		font-size: 1.2em;
+	}
+
+	.marcado {
+		font-weight: bold;
+	}
+
+	.m-10 {
+		margin: 10px;
+	}
+
+	.mt-10 {
+		margin-top: 10px;
+	}
+
+	.mt-20 {
+		margin-top: 20px;
+	}
+
+	.txt-item {
+		font-size: 12px;
+		letter-spacing: 0;
+		opacity: 1;
+		font-weight: bold;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	table {
+		width: 100%;
+
+		th.mat-header-cell:first-of-type {
+			padding: 0;
+		}
+
+		td.mat-cell:first-of-type {
+			padding: 0;
+		}
+
+		td.mat-cell:last-of-type {
+			padding-right: 0;
+		}
+
+		.cel-titulo {
+			font-size: 12px;
+			font-weight: bold;
+			letter-spacing: 0;
+			opacity: 1;
+			text-align: center;
+		}
+
+		td.mat-cell {
+			font-size: 12px;
+			letter-spacing: 0;
+			opacity: 1;
+			text-align: center;
+		}
+
+		.mat-column-correntista {
+			min-width: 300px !important;
+		}
+
+		.mat-column-valor {
+			min-width: 100px !important;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+<div fxLayout="column" fxFlexFill class="content">
+	<div fxLayout="column" fxLayoutAlign="center center" class="mb-20">
+		<span class="txt-titulo color-primary">Seleção de Título</span>
+	</div>
+	<div fxLayout="column" fxLayoutAlign="center start" class="mb-10">
+		<span class="txt-titulo-busca color-primary-300">Pesquisar por:</span>
+	</div>
+	<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="25px">
+		<div fxLayout="column" fxLayoutAlign="center space-between">
+			<mat-card class="border-primary-200 background-primary-50" fxFlex="0 0 50px">
+				<div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+					<div fxLayout="row" fxLayoutAlign="space-between center">
+						<mat-radio-group fxLayout="row" fxFlexFill color="primary" fxLayoutGap="25px">
+							<mat-radio-button value="1" class="txt-item bold color-primary-300"
+								>Número do Título</mat-radio-button
+							>
+							<mat-radio-button value="2" class="txt-item bold color-primary-300"
+								>Venc. Original (a partir de)</mat-radio-button
+							>
+							<mat-radio-button value="2" class="txt-item bold color-primary-300"
+								>Nº Borderô</mat-radio-button
+							>
+							<mat-radio-button value="2" class="txt-item bold color-primary-300"
+								>CNPJ Sacado</mat-radio-button
+							>
+						</mat-radio-group>
+					</div>
+				</div>
+			</mat-card>
+		</div>
+		<div fxLayout="column" fxFlex="25">
+			<mat-form-field>
+				<mat-label class="label color-primary-300">Digite</mat-label>
+				<input matInput />
+			</mat-form-field>
+		</div>
+		<div fxLayout="column" fxLayoutAlign="center start">
+			<button
+				mat-button
+				class="btn-filtrar border-primary-200 background-primary-300"
+				routerLink="filtrar-boletos"
+			>
+				<mat-icon svgIcon="filtros" class="icon"></mat-icon>
+				<span>Filtrar</span>
+			</button>
+		</div>
+	</div>
+</div>

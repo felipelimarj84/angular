@@ -1,0 +1,5 @@
+$wf-vermelho-primary: mat-palette($mat-wf-vermelho);
+$wf-vermelho-accent: mat-palette($mat-light-blue);
+$wf-vermelho-warn: mat-palette($mat-red, 600);
+
+$wf-vermelho-theme: mat-light-theme($wf-vermelho-primary, $wf-vermelho-accent, $wf-vermelho-warn);

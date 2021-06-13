@@ -1,0 +1,98 @@
+<div fxLayout="column" class="content">
+	<div fxLayout="column">
+		<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+			<span class="txt-item color-primary-300">Período:</span>
+			<mat-form-field fxFlex="14">
+				<mat-label class="label color-primary-300">De</mat-label>
+				<input matInput />
+				<mat-icon matSuffix class="icon-periodo color-primary-300">calendar_today</mat-icon>
+			</mat-form-field>
+			<mat-form-field fxFlex="14">
+				<mat-label class="label color-primary-300">Até</mat-label>
+				<input matInput />
+				<mat-icon matSuffix class="icon-periodo color-primary-300">calendar_today</mat-icon>
+			</mat-form-field>
+			<mat-radio-group fxLayout="row" color="primary" fxLayoutGap="25px">
+				<mat-radio-button value="1" class="txt-item color-primary-300"
+					>Data Aquisição</mat-radio-button
+				>
+				<mat-radio-button value="2" class="txt-item color-primary-300"
+					>Data Execução</mat-radio-button
+				>
+			</mat-radio-group>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="15px">
+			<div fxLayout="column" fxFlexFill>
+				<mat-card
+					fxLayout="row"
+					fxFlexFill
+					class="border-primary-200 background-primary-50"
+					fxFlex="0 0 50px"
+				>
+					<mat-radio-group
+						fxLayout="row"
+						fxFlexFill
+						color="primary"
+						fxLayoutGap="15px"
+						(change)="opcaoSelecionada($event)"
+					>
+						<mat-radio-button value="1" class="txt-item color-primary-300"
+							>Padrão CNAB-RGBSys</mat-radio-button
+						>
+						<mat-radio-button value="2" class="txt-item color-primary-300"
+							>Padrão CNAB-Spread
+						</mat-radio-button>
+						<mat-radio-button value="3" class="txt-item color-primary-300"
+							>Padrão CNAB-Bradesco</mat-radio-button
+						>
+						<mat-radio-button value="4" class="txt-item color-primary-300"
+							>Padrão ConsultBrasil
+						</mat-radio-button>
+						<mat-radio-button value="5" class="txt-item color-primary-300"
+							>Retornos CNAB</mat-radio-button
+						>
+						<mat-radio-button value="6" class="txt-item color-primary-300"
+							>Padrão CNAB-Itaú</mat-radio-button
+						>
+					</mat-radio-group>
+				</mat-card>
+			</div>
+		</div>
+		<div
+			fxLayout="row"
+			fxLayoutAlign="start center"
+			fxFlexFill
+			fxLayoutGap="20px"
+			class="mt-10"
+			*ngIf="opcao == '3' || opcao == '6'"
+		>
+			<mat-checkbox class="txt-chk color-primary-300" color="primary"
+				>Inclui Entrada de Títulos</mat-checkbox
+			>
+			<mat-checkbox class="txt-chk color-primary-300" color="primary"
+				>Inclui Títulos Rejeitados</mat-checkbox
+			>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="20px" *ngIf="opcao == '5'">
+			<span class="txt-chk color-primary-300">Selecione o Banco:</span>
+			<mat-form-field>
+				<mat-select class="txt-select">
+					<mat-option>Banco Bradesco S.A.</mat-option>
+					<mat-option>ITAU Unibanco S.A.</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="end center" fxFlexFill fxLayoutGap="20px" class="mt-10">
+			<div fxLayout="column" fxLayoutAlign="center start">
+				<button
+					mat-button
+					class="btn-filtrar border-primary-200 background-primary-300"
+					routerLink="filtrar-consultas"
+				>
+					<mat-icon svgIcon="filtros" class="icon"></mat-icon>
+					<span>Filtrar</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

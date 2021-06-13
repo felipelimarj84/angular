@@ -1,0 +1,5 @@
+$wf-preto-primary: mat-palette($mat-wf-preto);
+$wf-preto-accent: mat-palette($mat-light-blue);
+$wf-preto-warn: mat-palette($mat-red, 600);
+
+$wf-preto-theme: mat-light-theme($wf-preto-primary, $wf-preto-accent, $wf-preto-warn);

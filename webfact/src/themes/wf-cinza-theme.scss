@@ -1,0 +1,5 @@
+$wf-cinza-primary: mat-palette($mat-wf-cinza);
+$wf-cinza-accent: mat-palette($mat-light-blue);
+$wf-cinza-warn: mat-palette($mat-red, 600);
+
+$wf-cinza-theme: mat-light-theme($wf-cinza-primary, $wf-cinza-accent, $wf-cinza-warn);

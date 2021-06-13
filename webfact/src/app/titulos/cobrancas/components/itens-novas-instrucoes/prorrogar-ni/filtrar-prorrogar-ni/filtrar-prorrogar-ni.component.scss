@@ -1,0 +1,94 @@
+.content {
+	padding: 25px;
+
+	.div-table {
+		margin-top: 20px;
+	}
+
+	.btn-close {
+		width: 106px;
+		height: 35px;
+		background-color: #fff;
+		color: #ff3b30;
+		border: 1px solid #d1d1d6;
+		border-radius: 6px;
+		font-size: 14px;
+		font-weight: normal;
+		letter-spacing: 0;
+		line-height: 0;
+		padding: 0;
+		margin-bottom: 25px;
+	}
+
+	.btn-padrao {
+		border-radius: 12px;
+		height: 25px;
+		font-size: 12px;
+		line-height: 0;
+		background-color: #ffffff;
+	}
+
+	.btn-padrao-2 {
+		border-radius: 12px;
+		height: 25px;
+		font-size: 12px;
+		line-height: 0;
+		background-color: #ffffff;
+		color: #8e8e93;
+		border: 1px solid #8e8e93;
+	}
+
+	.ml-5 {
+		margin-left: 5px;
+	}
+
+	.txt-titulo-item {
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	table {
+		width: 100%;
+
+		th.mat-header-cell:first-of-type {
+			padding: 0;
+		}
+
+		td.mat-cell:first-of-type {
+			padding: 0;
+		}
+
+		td.mat-cell:last-of-type {
+			padding-right: 0;
+		}
+
+		.cel-titulo {
+			font-size: 12px;
+			font-weight: bold;
+			letter-spacing: 0;
+			opacity: 1;
+			text-align: center;
+		}
+
+		td.mat-cell {
+			font-size: 12px;
+			letter-spacing: 0;
+			opacity: 1;
+			text-align: center;
+		}
+
+		.mat-column-correntista {
+			min-width: 300px !important;
+		}
+
+		.mat-column-valor {
+			min-width: 100px !important;
+		}
+	}
+}

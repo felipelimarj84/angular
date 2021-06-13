@@ -1,0 +1,14 @@
+<div fxFlexFill>
+	<mat-card *ngIf="settings$ | async as settings">
+		My Alternate Themes:
+		<button mat-raised-button color="primary">Primary</button>
+		<button mat-raised-button color="accent">Accent</button>
+		<button mat-raised-button color="warn">Warning</button>
+
+		<mat-select (selectionChange)="onThemeSelect($event)">
+			<mat-option *ngFor="let t of themes" [value]="t.value">
+				{{ t.label }}
+			</mat-option>
+		</mat-select>
+	</mat-card>
+</div>

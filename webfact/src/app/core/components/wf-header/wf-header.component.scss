@@ -1,0 +1,56 @@
+.mat-badge-content.mat-badge-active {
+	font-weight: normal;
+}
+
+.img-logo {
+	padding: 0 29px 0 11px;
+}
+
+.img-logo-personalizado {
+	padding: 0 29px 0 0;
+}
+
+.icon-notification {
+	font-size: xx-large;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.txt-dados {
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0;
+	opacity: 1;
+}
+
+.txt-msg {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+}
+
+.txt-usuario {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+.txt-email {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+	color: #9b9b9b;
+}
+
+.img-avatar {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	object-fit: cover;
+	margin-left: 15px;
+}

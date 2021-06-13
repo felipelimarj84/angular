@@ -1,0 +1,43 @@
+.content {
+	margin: 25px 0 25px 0;
+
+	.txt-titulo {
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.btn-close {
+		width: 106px;
+		height: 35px;
+		background-color: #fff;
+		color: #ff3b30;
+		border: 1px solid #d1d1d6;
+		border-radius: 6px;
+		font-size: 14px;
+		font-weight: normal;
+		letter-spacing: 0;
+		line-height: 0;
+		padding: 0;
+		margin: 0 25px 0 0;
+	}
+
+	.ml-5 {
+		margin-left: 5px;
+	}
+}
+
+.drawer {
+	min-width: 90%;
+}
+
+.drawer-full {
+	min-width: 100%;
+	position: fixed;
+	margin-top: 85px;
+}
+
+.mat-drawer-inner-container {
+	position: absolute !important;
+}

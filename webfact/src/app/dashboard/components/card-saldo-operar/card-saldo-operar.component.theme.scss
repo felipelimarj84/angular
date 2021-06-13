@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+@mixin card-saldo-operar-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	app-card-saldo-operar {
+		.txt-color-primary {
+			color: mat-color($primary);
+		}
+
+		.txt-color-warn {
+			color: mat-color($warn);
+		}
+
+		.border-card {
+			border: 1px solid mat-color($primary, 200);
+		}
+	}
+}

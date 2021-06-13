@@ -1,0 +1,36 @@
+<mat-drawer-container class="background-primary-50" autosize hasBackdrop="false" fxFlexFill>
+	<mat-drawer
+		#drawer
+		class="drawer"
+		[ngClass]="{ drawer: !drawerFull, 'drawer-full': drawerFull }"
+		mode="over"
+		position="end"
+	>
+		<div fxLayout="column">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-drawer>
+
+	<div class="drawer-content background-primary-50">
+		<div class="content background-primary-50">
+			<div fxLayout="row" fxLayoutAlign="end center" fxFlexFill>
+				<button mat-button class="btn-close" (click)="close()">
+					<mat-icon>close</mat-icon>
+					<span class="ml-5">Fechar</span>
+				</button>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="center center">
+				<mat-tab-group animationDuration="0ms" [selectedIndex]="id$ | async">
+					<mat-tab label="Prorrogar"><app-prorrogar-ni></app-prorrogar-ni></mat-tab>
+					<mat-tab label="Abater"><app-abater-ni></app-abater-ni></mat-tab>
+					<mat-tab label="Cancelar Abatimento"> <app-cancelar-ni></app-cancelar-ni> </mat-tab>
+					<mat-tab label="Protestar"><app-protestar-ni></app-protestar-ni> </mat-tab>
+					<mat-tab label="Sustar Protesto"><app-sustar-ni></app-sustar-ni> </mat-tab>
+					<mat-tab label="Antecipação"><app-antecipacao-ni></app-antecipacao-ni> </mat-tab>
+					<mat-tab label="Baixar"><app-baixar-ni></app-baixar-ni> </mat-tab>
+					<mat-tab label="Retirada"><app-retirada-ni></app-retirada-ni> </mat-tab>
+				</mat-tab-group>
+			</div>
+		</div>
+	</div>
+</mat-drawer-container>

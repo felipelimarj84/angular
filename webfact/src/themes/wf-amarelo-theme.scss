@@ -1,0 +1,5 @@
+$wf-amarelo-primary: mat-palette($mat-wf-amarelo);
+$wf-amarelo-accent: mat-palette($mat-light-blue);
+$wf-amarelo-warn: mat-palette($mat-red, 600);
+
+$wf-amarelo-theme: mat-light-theme($wf-amarelo-primary, $wf-amarelo-accent, $wf-amarelo-warn);

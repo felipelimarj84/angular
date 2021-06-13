@@ -1,0 +1,30 @@
+@import '~@angular/material/theming';
+
+@mixin wf-layout-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	.color-primary {
+		color: mat-color($primary) !important;
+	}
+
+	.header {
+		border-bottom: 1px solid mat-color($primary, 50);
+	}
+
+	.div-lateral {
+		background-color: mat-color($primary);
+	}
+
+	.background-primary-50 {
+		background: mat-color($primary, 50);
+	}
+
+	.txt-itens :hover {
+		background: mat-color($primary, 50);
+	}
+	.border-primary-50 {
+		border-color: mat-color($primary, 50);
+	}
+}

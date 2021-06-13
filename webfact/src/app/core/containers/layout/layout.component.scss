@@ -1,0 +1,58 @@
+.div-router {
+	overflow-y: auto;
+}
+
+.conteudo {
+	overflow: hidden;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.mat-list-custom {
+	width: 200px;
+}
+
+.txt-itens {
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.router-active {
+	font-weight: bold;
+}
+
+.botao-sub-menu {
+	width: 20px;
+	height: 120px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: #ffffff;
+	.seta-esquerda {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 4px 8px 4px 0;
+		border-color: transparent #000000 transparent transparent;
+	}
+	.seta-direita {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 4px 0 4px 8px;
+		border-color: transparent transparent transparent #000000;
+	}
+}
+
+.efeito-sub-menu {
+	background-color: #ffffff;
+}
+
+.hidden-subMenu {
+	display: none !important;
+}

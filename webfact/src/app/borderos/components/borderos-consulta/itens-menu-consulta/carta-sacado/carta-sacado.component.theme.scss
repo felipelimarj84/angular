@@ -1,0 +1,63 @@
+@import '~@angular/material/theming';
+
+@mixin carta-sacado-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	app-carta-sacado {
+		.color-primary {
+			color: mat-color($primary);
+		}
+
+		.color-primary-300 {
+			color: mat-color($primary, 300);
+		}
+
+		.border-primary-200 {
+			border: 1px solid mat-color($primary, 200);
+		}
+
+		.mat-tab-label-content {
+			color: mat-color($primary, 200);
+			font-size: 18px;
+			font-weight: bold;
+			letter-spacing: 0;
+			opacity: 1;
+		}
+
+		.mat-tab-label-active {
+			.mat-tab-label-content {
+				color: mat-color($primary, 400);
+			}
+		}
+
+		.mat-tab-label {
+			width: 100%;
+		}
+
+		.mat-tab-group {
+			width: 100%;
+		}
+
+		.mat-cell {
+			color: mat-color($primary, 300);
+		}
+
+		tr:nth-child(even) {
+			background-color: mat-color($primary, 50);
+		}
+
+		.mat-paginator {
+			color: mat-color($primary, 300);
+		}
+
+		.mat-checkbox .mat-checkbox-frame {
+			border-color: mat-color($primary, 300) !important;
+		}
+
+		.mat-checkbox .mat-checkbox-frame {
+			border-width: 1px;
+		}
+	}
+}

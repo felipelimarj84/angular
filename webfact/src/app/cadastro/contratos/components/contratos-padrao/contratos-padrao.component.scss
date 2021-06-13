@@ -1,0 +1,11 @@
+.content {
+	background-color: #fff;
+
+	.conteudo-relatorio {
+		border: 1px solid #cbc8cf;
+		min-width: 600px !important;
+		margin: 20px;
+		padding: 20px;
+		min-height: calc(100vh - 252px);
+	}
+}

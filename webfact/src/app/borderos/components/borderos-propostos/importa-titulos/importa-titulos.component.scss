@@ -1,0 +1,152 @@
+.div-geral {
+	padding: 25px;
+	min-width: 750px;
+
+	.div-interna {
+		padding: 10px 15px 15px 15px;
+	}
+
+	.btn-cancelar {
+		width: 192px;
+		height: 43px;
+		border-radius: 6px;
+		color: #8e8e93;
+		border: 1px solid #c7c7cc;
+		border-radius: 6px;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	.btn-salvar {
+		width: 192px;
+		height: 43px;
+		border-radius: 6px;
+		color: #fff;
+		background: #4cd964 0% 0% no-repeat padding-box;
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.btn-arquivo {
+		border-radius: 6px;
+		height: 25px;
+		font-size: 10px;
+		font-weight: 500;
+		line-height: 0;
+	}
+
+	.btn-verifica {
+		border-radius: 6px;
+		width: 192px;
+		height: 43px;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	.btn-padrao {
+		background-color: #ffffff !important;
+		box-shadow: none !important;
+		height: 30px;
+		width: 30px;
+	}
+
+	.excluir {
+		color: #ff7171 !important;
+		border: 1px solid #ff7171 !important;
+	}
+
+	.icon {
+		line-height: 14px;
+		font-size: 1.2em;
+	}
+
+	.txt-titulo {
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.txt-subtitulo {
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.txt-item {
+		font-size: 12px;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.txt-exemplo {
+		font-size: 10px;
+		letter-spacing: 0;
+		opacity: 1;
+		color: #606060;
+	}
+
+	.bold {
+		font-weight: bold;
+	}
+
+	.normal {
+		font-weight: normal;
+	}
+
+	.txt-chk {
+		font-size: 14px;
+	}
+
+	.border-card {
+		border-radius: 8px;
+		opacity: 1;
+	}
+
+	.mt-20 {
+		margin-top: 20px;
+	}
+
+	.mb-20 {
+		margin-bottom: 20px;
+	}
+
+	.mb-5 {
+		margin-bottom: 5px;
+	}
+
+	.pb-5 {
+		padding-bottom: 5px;
+	}
+
+	.pt-15 {
+		padding-top: 15px;
+	}
+
+	.pt-5 {
+		padding-top: 5px;
+	}
+
+	.p-20 {
+		padding: 20px;
+	}
+
+	.btn-close {
+		width: 106px;
+		height: 35px;
+		background-color: #fff;
+		color: #ff3b30;
+		border: 1px solid #d1d1d6;
+		border-radius: 6px;
+		font-size: 14px;
+		font-weight: normal;
+		letter-spacing: 0;
+		line-height: 0;
+		padding: 0;
+	}
+
+	.ml-5 {
+		margin-left: 5px;
+	}
+}

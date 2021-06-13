@@ -1,0 +1,206 @@
+<div fxLayout="column" class="div-geral">
+	<div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+		<span class="txt-titulo color-primary">Incluir Cheque</span>
+		<button mat-button class="btn-close" (click)="close()">
+			<mat-icon>close</mat-icon>
+			<span class="ml-5">Fechar</span>
+		</button>
+	</div>
+
+	<div fxLayout="row" fxLayoutAlign="center center" class="div-tab">
+		<!-- Incluir Cheque - Início -->
+		<div fxLayout="column" class="div-content">
+			<div fxLayout="column">
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="54">
+						<mat-form-field>
+							<mat-label class="label color-primary-300"
+								>Passe o cheque na leitora ou digite o CMC7 completo
+								<mat-icon class="icon color-primary-300">help_outline</mat-icon>
+							</mat-label>
+
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="23">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Banco</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="23">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Agência</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Conta</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Cheque</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Praça</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Vencimento (dd/mm/aa)</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Valor</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Número Fatura</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Série</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Valor Fatura</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="75">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Chave DANFE</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+			<div fxLayout="column" class="pl-20 pr-20 background-primary-50">
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" class="mt-20">
+						<mat-checkbox class="txt-chk color-primary-300" color="primary"
+							>Repetir este sacado para próximo cheque?
+						</mat-checkbox>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="50">
+						<mat-form-field>
+							<mat-label class="label color-primary-300"
+								>CNPJ - * Digite apenas os números do CNPJ</mat-label
+							>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="75">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Nome</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="25">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Apelido</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="50">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Endereço</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="50">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Bairro</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="54">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Cidade</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="23">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">UF</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="23">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">CEP</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="54">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">E-mail</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="23">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Fone</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+					<div fxLayout="column" fxFlex="23">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Fone de cobrança</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div fxLayout="column" fxFlex="75">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Inscrição</mat-label>
+							<input matInput value="" />
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+			<div fxLayout="row" class="p-20" fxLayoutAlign="end center" fxLayoutGap="30px">
+				<button mat-button class="btn-cancelar">
+					<span>Cancelar</span>
+				</button>
+				<button mat-button class="btn-salvar">
+					<span>Salvar</span>
+				</button>
+			</div>
+		</div>
+
+		<!-- Incluir Cheque - Fim -->
+	</div>
+</div>

@@ -1,0 +1,139 @@
+
+.card-alert {
+	border: 1px solid #ff7171;
+	background: #ff71711a 0% 0% no-repeat padding-box;
+	padding: 20px 30px 20px 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.txt-alert {
+	font-size: 16px;
+	padding-bottom: 15px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+	color: #ff7171;
+}
+
+.txt-alert-erro {
+	font-size: 13px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+	color: #ff7171;
+	text-align: left;
+}
+
+
+.icon-fechar{
+	cursor: pointer;
+}
+
+
+.fotourl{
+	width: 60px;
+	height: 60px;
+}
+
+.div-geral {
+	padding: 20px 0 20px 0;
+}
+
+.div-topo {
+	padding: 0 30px 0 30px;
+}
+
+.div-padrao {
+	padding: 20px 30px 20px 30px;
+}
+
+.div-subtitulo {
+	padding: 20px 30px 5px 30px;
+}
+
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+	border-width: 1px;
+}
+
+.space-25 {
+	margin-left: 25px;
+}
+
+.space-50 {
+	margin-left: 50px;
+}
+
+.txt-titulo {
+	font-size: 18px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+}
+
+.txt-subtitulo {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+}
+
+.txt-chk {
+	font-size: 12px;
+}
+
+.label {
+	font-size: 16px;
+}
+
+.upload {
+	border-radius: 50%;
+	padding: 7px;
+	color: #fff;
+}
+
+.margin-top-10 {
+	margin-top: 10px;
+}
+
+.btn-config {
+	width: 158px;
+	height: 30px;
+	border-radius: 4px;
+	opacity: 1;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0;
+	opacity: 1;
+	line-height: 0;
+}
+
+
+.btn-background-primary {
+	background-color: blue;
+}
+
+
+.btn-cancelar {
+	width: 192px;
+	height: 43px;
+	border-radius: 6px;
+	color: #8e8e93;
+	border: 1px solid #c7c7cc;
+	border-radius: 6px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.btn-salvar {
+	width: 192px;
+	height: 43px;
+	border-radius: 6px;
+	color: #fff;
+	background: #4cd964 0% 0% no-repeat padding-box;
+	border-radius: 6px;
+	font-size: 12px;
+	font-weight: normal;
+}
+

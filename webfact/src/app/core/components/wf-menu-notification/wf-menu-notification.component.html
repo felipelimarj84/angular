@@ -1,0 +1,90 @@
+<div fxLayout="row" fxLayoutAlign="center center" [class]="'div-menu ' + (theme$ | async)">
+	<div fxLayout="column" fxFlex="485px" fxLayoutAlign="center center" class="arrow_box">
+		<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
+			<span class="txt-titulo-mn color-primary-mn">Inclusão e exclusão de colaborador</span>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="div-dados">
+			<div fxLayout="row" fxLayoutAlign="start center" fxFlex="70">
+				<div
+					fxLayout="row"
+					fxLayoutAlign="center center"
+					mat-card-avatar
+					class="img-avatar-mn border-color-primary-mn"
+				>
+					<mat-icon color="primary">person</mat-icon>
+				</div>
+				<div fxLayout="column" fxLayoutAlign="center start">
+					<span class="txt-usuario-mn color-primary-mn"> Ricardo Almeida</span>
+					<span class="txt-email-mn">ricardo@rgb.com.br</span>
+				</div>
+			</div>
+			<div fxLayout="column" fxLayoutAlign="center end" fxFlex="30">
+				<button mat-button class="btn-ntf-mn btn-background-primary-300-mn">
+					<span>Incluir agora</span>
+				</button>
+			</div>
+		</div>
+		<div fxLayout="row" fxFlexFill class="border-top-color-primary-100-mn"></div>
+		<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="div-dados">
+			<div fxLayout="row" fxLayoutAlign="start center" fxFlex="70">
+				<div
+					fxLayout="row"
+					fxLayoutAlign="center center"
+					mat-card-avatar
+					class="img-avatar-mn border-color-primary-mn"
+				>
+					<mat-icon color="primary">person</mat-icon>
+				</div>
+				<div fxLayout="column" fxLayoutAlign="center start">
+					<span class="txt-usuario-mn color-primary-mn"> Ricardo Almeida</span>
+					<span class="txt-email-mn">ricardo@rgb.com.br</span>
+				</div>
+			</div>
+			<div fxLayout="column" fxLayoutAlign="center end" fxFlex="30">
+				<button mat-button class="btn-ntf-mn btn-background-primary-300-mn">
+					<span>Excluir agora</span>
+				</button>
+			</div>
+		</div>
+		<div fxLayout="row" fxFlexFill class="border-top-color-primary-100-mn"></div>
+
+		<div fxLayout="column" fxFlexFill class="div-promissoria">
+			<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
+				<span class="txt-titulo-mn color-primary-mn">Promissórias vencendo</span>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="div-dados">
+				<div fxLayout="column" fxLayoutAlign="center start" fxFlex="70">
+					<span class="txt-vencimento-mn">Vencimento 20/01/2020 </span>
+					<span class="txt-valor-mn color-primary-mn">R$ 50.000,00</span>
+				</div>
+				<div fxLayout="column" fxLayoutAlign="center end" fxFlex="30">
+					<button mat-button class="btn-promissoria-mn btn-background-primary-300-mn">
+						<span>Ver promissória</span>
+					</button>
+				</div>
+			</div>
+			<div fxLayout="row" fxFlexFill class="border-top-color-primary-100-mn"></div>
+			<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="div-dados">
+				<div fxLayout="column" fxLayoutAlign="center start" fxFlex="70">
+					<span class="txt-vencimento-mn vencido-mn">Vencido 12/01/2020</span>
+					<span class="txt-valor-mn vencido-mn">R$ 50.000,00</span>
+				</div>
+				<div fxLayout="column" fxLayoutAlign="center end" fxFlex="30">
+					<button mat-button class="btn-promissoria-mn btn-background-primary-300-mn">
+						<span>Ver promissória</span>
+					</button>
+				</div>
+			</div>
+			<div fxLayout="row" fxFlexFill class="border-top-color-primary-100-mn"></div>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="center center">
+			<button
+				mat-button
+				class="btn-notificacoes-mn btn-background-primary-A200-mn"
+				routerLink="listar-notificacoes"
+			>
+				<span>Ver todas as Notificações</span>
+			</button>
+		</div>
+	</div>
+</div>

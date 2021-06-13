@@ -1,0 +1,116 @@
+<div fxLayout="column" fxFlexFill class="content">
+	<div fxLayout="row" fxLayoutAlign="end start" fxLayoutGap="20px">
+		<button mat-button class="btn-new color-primary-300" routerLink="nova-proposta">
+			<span>Nova Proposta</span>
+		</button>
+		<button mat-button class="btn-new color-primary-300" routerLink="importa-titulos">
+			<span>Importa Títulos</span>
+		</button>
+		<button mat-button class="btn-new color-primary-300" routerLink="importa-titulos-xml">
+			<span>Importa Títulos XML NF-e/CT-e</span>
+		</button>
+	</div>
+
+	<div *ngIf="(dadosListaProposta$ | async)" fxLayout="row" fxLayoutAlign="center center">
+		<table mat-table [dataSource]="dataSource" matSort>
+
+			<ng-container matColumnDef="data">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Data
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.data | date: 'dd/MM/yyyy' }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="numero">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Nº
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.numero }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="status">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Status
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.status }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="bordero">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Borderô
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.bordero }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="qtD_APROVADOS">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">Qtd. Apr.</th>
+				<td mat-cell *matCellDef="let element">{{ element.qtD_APROVADOS }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="vlR_APROVADOS">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">Val. Apr.</th>
+				<td mat-cell *matCellDef="let element">{{ element.vlR_APROVADOS | currency: 'BRL' }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="qtD_REP_TOT">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">Qtd. Rep.</th>
+				<td mat-cell *matCellDef="let element">{{ element.qtD_REP_TOT }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="vlR_REP_TOT">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">Val. Rep.</th>
+				<td mat-cell *matCellDef="let element">{{ element.vlR_REP_TOT | currency: 'BRL'  }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="qtD_PROPOSTOS">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">Qtd. Proposto
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.qtD_PROPOSTOS }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="vlR_PROPOSTOS">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">Val. Proposto
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.vlR_PROPOSTOS |  currency: 'BRL'  }}</td>
+			</ng-container>
+
+			 <ng-container matColumnDef="p_PAGO">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Previsão do Líquido
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.p_PAGO |  currency: 'BRL'}}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="options">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary"></th>
+				<td mat-cell *matCellDef="let element">
+					<mat-icon [matMenuTriggerFor]="menuItens" class="icon">more_vert</mat-icon>
+				</td>
+			</ng-container>
+
+			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+		</table>
+	</div>
+	<div fxLayout="row" fxLayoutAlign="end center" class="div-paginator">
+		<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+	</div>
+</div>
+
+<mat-menu #menuItens="matMenu" class="mat-menu-transparent">
+	<div fxLayout="row" fxLayoutAlign="center center" [class]="theme$ | async">
+		<div fxLayout="column" fxFlex="150px" fxLayoutAlign="center center" class="arrow_box">
+			<div fxLayout="column" fxLayoutAlign="center start" fxFlexFill>
+				<span class="txt-itens color-primary-400" routerLink="itens-menu/0">Título</span>
+				<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+				<span class="txt-itens color-primary-400" routerLink="itens-menu/1">Liberações</span>
+				<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+				<span class="txt-itens color-primary-400 finalizada">Finalizada</span>
+				<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+				<span class="txt-itens color-primary-400" routerLink="itens-menu/2">Imprime Duplicatas</span>
+				<div fxLayout="row" fxFlexFill class="border-top-color-primary-100"></div>
+				<span class="txt-itens color-primary-400" routerLink="itens-menu/3">Enviar NFe</span>
+			</div>
+		</div>
+	</div>
+</mat-menu>

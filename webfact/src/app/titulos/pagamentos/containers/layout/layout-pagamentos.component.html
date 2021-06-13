@@ -1,0 +1,19 @@
+<mat-drawer-container class="background-primary-50" autosize hasBackdrop="false" fxFlexFill>
+	<mat-drawer #drawer class="drawer" mode="over" position="end">
+		<div fxLayout="column">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-drawer>
+
+	<div class="drawer-content">
+		<div class="content">
+			<div fxLayout="column" fxLayoutAlign="center start">
+				<span class="txt-titulo color-primary">Arquivo de Pagamentos</span>
+			</div>
+
+			<div fxLayout="column" fxFlexFill class="div-content-lib">
+				<app-home-pagamentos></app-home-pagamentos>
+			</div>
+		</div>
+	</div>
+</mat-drawer-container>

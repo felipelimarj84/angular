@@ -1,0 +1,30 @@
+.content {
+	background-color: #fff;
+
+	.conteudo-relatorio {
+		border: 1px solid #cbc8cf;
+		min-width: 600px !important;
+		margin: 20px;
+		padding: 20px;
+		min-height: calc(100vh - 182px);
+	}
+
+	.btn-close {
+		width: 106px;
+		height: 35px;
+		background-color: #fff;
+		color: #ff3b30;
+		border: 1px solid #d1d1d6;
+		border-radius: 6px;
+		font-size: 14px;
+		font-weight: normal;
+		letter-spacing: 0;
+		line-height: 0;
+		padding: 0;
+		margin: 20px 20px 0 0;
+	}
+
+	.ml-5 {
+		margin-left: 5px;
+	}
+}

@@ -1,0 +1,76 @@
+.content {
+	background-color: #fff;
+	min-height: calc(100vh - 220px) !important;
+	border-left: 1px solid #cbc8cf;
+	border-right: 1px solid #cbc8cf;
+	border-bottom: 1px solid #cbc8cf;
+	padding: 20px;
+
+	.btn-imprimir {
+		border-radius: 6px;
+		height: 43px;
+		width: 192px;
+		font-size: 12px;
+		font-weight: 500;
+		color: #fff;
+	}
+
+	.btn-padrao {
+		height: 32px;
+		width: 32px;
+		line-height: 0;
+		background-color: #fff;
+	}
+
+	.txt-item {
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+	.icon-itens {
+		width: 16px;
+	}
+
+	.ml-15 {
+		margin-left: 15px;
+	}
+
+	.mb-20 {
+		margin-bottom: 20px;
+	}
+
+	.div-paginator {
+		margin-right: 15px;
+	}
+
+	table {
+		width: 100%;
+
+		th.mat-header-cell:first-of-type {
+			padding: 0;
+		}
+
+		td.mat-cell:first-of-type {
+			padding: 0;
+		}
+
+		td.mat-cell:last-of-type {
+			padding-right: 0;
+		}
+
+		.cel-titulo {
+			font-size: 12px;
+			font-weight: bold;
+			letter-spacing: 0;
+			opacity: 1;
+			text-align: center;
+		}
+
+		td.mat-cell {
+			font-size: 12px;
+			letter-spacing: 0;
+			opacity: 1;
+			text-align: center;
+		}
+	}
+}

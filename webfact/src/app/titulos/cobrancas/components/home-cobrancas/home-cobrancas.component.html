@@ -1,0 +1,85 @@
+<div fxLayout="column" fxFlexFill class="content">
+	<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px" class="mb-10">
+		<button mat-button class="btn-new color-primary-300" routerLink="novas-instrucoes/0">
+			<span>Novas Instruções</span>
+		</button>
+	</div>
+
+	<div fxLayout="row" fxLayoutAlign="center center">
+		<table mat-table [dataSource]="dataSource" matSort>
+			<ng-container matColumnDef="solicitacao">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Solicitação
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.solicitacao }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="titulo">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Título
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.titulo }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="sacadoEmitente">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Sacado/Emitente
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.sacadoEmitente }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="valor">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Valor
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.valor }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="novovencimento">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Novo Vencimento
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.novovencimento }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="abatimento">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Abatimento
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.abatimento }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="situacao">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header class="cel-titulo color-primary">
+					Situação
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.situacao }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="options">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary"></th>
+				<td mat-cell *matCellDef="let element">
+					<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+						<button
+							mat-button
+							title="Autorização"
+							class="btn-padrao-mini autorizacao color-primary-300 border-primary-200"
+						>
+							<span>Autorização</span>
+						</button>
+						<button mat-button title="Autorização" class="btn-padrao-mini cancelar">
+							<span>Cancelar</span>
+						</button>
+					</div>
+				</td>
+			</ng-container>
+
+			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+		</table>
+	</div>
+	<div fxLayout="row" fxLayoutAlign="end center" class="div-paginator">
+		<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+	</div>
+</div>
+

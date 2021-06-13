@@ -1,0 +1,20 @@
+<button
+	fxLayout="column"
+	mat-flat-button
+	class="btn"
+	color="primary"
+	fxLayoutAlign="center center"
+	[routerLink]="b.routerLink"
+	routerLinkActive="active"
+	*ngFor="let b of botoes"
+	(click)="onMenuRouterClick(b.childs)"
+>
+	<mat-icon
+		[svgIcon]="b.svgIcon"
+		class="img-icon"
+		routerLinkActive="active color-primary"
+		fxLayout="column"
+		fxLayoutAlign="center center"
+	></mat-icon>
+	<span class="title-card" routerLinkActive="active color-primary-300">{{ b.title }}</span>
+</button>

@@ -1,0 +1,57 @@
+.content {
+	background-color: #fff;
+	min-height: calc(100vh - 220px) !important;
+	border-left: 1px solid #cbc8cf;
+	border-right: 1px solid #cbc8cf;
+	border-bottom: 1px solid #cbc8cf;
+	padding: 20px;
+
+	.txt-titulo {
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.txt-titulo-busca {
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.txt-item {
+		font-size: 12px;
+		letter-spacing: 0;
+		opacity: 1;
+		font-weight: bold;
+	}
+
+	.mb-20 {
+		margin-bottom: 20px;
+	}
+
+	.mb-10 {
+		margin-bottom: 10px;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	.btn-filtrar {
+		border-radius: 6px;
+		width: 131px;
+		height: 43px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 0;
+		margin-bottom: 10px;
+		color: #fff;
+	}
+
+	.icon {
+		width: 16px;
+		margin-right: 10px;
+	}
+}

@@ -1,0 +1,40 @@
+.bold {
+	font-weight: bold;
+}
+
+.txt-titulo {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+}
+
+.txt-valor {
+	font-size: 30px;
+	letter-spacing: 0;
+	opacity: 1;
+	padding: 0.2em 0;
+}
+
+.txt-descricao {
+	font-size: 12px;
+	letter-spacing: 0;
+	margin-right: 5px;
+}
+
+.txt-color-vencer {
+	color: #ffb058;
+}
+
+.txt-color-vencido {
+	color: #ff7171;
+}
+
+.txt-color-cliente {
+	color: #30dbdb;
+}
+
+.border-card {
+	max-width: fit-content;
+	border-radius: 8px;
+	min-width: 360px;
+}

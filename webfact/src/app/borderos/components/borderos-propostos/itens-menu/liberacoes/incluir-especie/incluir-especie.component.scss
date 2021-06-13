@@ -1,0 +1,67 @@
+.div-geral {
+	padding: 25px;
+	min-width: 590px;
+
+	.div-tab {
+		margin-top: 10px;
+	}
+
+	.div-content {
+		background-color: #fff;
+	}
+
+	.mt-20 {
+		margin-top: 20px;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	.btn-cancelar {
+		width: 192px;
+		height: 43px;
+		border-radius: 6px;
+		color: #8e8e93;
+		border: 1px solid #c7c7cc;
+		border-radius: 6px;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	.btn-salvar {
+		width: 192px;
+		height: 43px;
+		border-radius: 6px;
+		color: #fff;
+		background: #4cd964 0% 0% no-repeat padding-box;
+		border-radius: 6px;
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.txt-titulo {
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.btn-close {
+		width: 106px;
+		height: 35px;
+		background-color: #fff;
+		color: #ff3b30;
+		border: 1px solid #d1d1d6;
+		border-radius: 6px;
+		font-size: 14px;
+		font-weight: normal;
+		letter-spacing: 0;
+		line-height: 0;
+		padding: 0;
+	}
+
+	.ml-5 {
+		margin-left: 5px;
+	}
+}

@@ -1,0 +1,29 @@
+.drawer {
+	min-width: 590px;
+}
+
+.drawer-full {
+	min-width: 100%;
+	position: fixed;
+	margin-top: 85px;
+}
+.mat-drawer-inner-container {
+	position: absolute !important;
+}
+
+.icon-close {
+	padding: 0 7px 0 0;
+}
+
+.btn-new {
+	width: 115px;
+	height: 35px;
+	background-color: #fff;
+	color: #ff3b30;
+	border: 1px solid #d1d1d6;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0;
+	margin: 10px 10px 0 0;
+}

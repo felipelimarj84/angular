@@ -1,0 +1,43 @@
+<div fxFill>
+	<div fxFill fxLayout="row" [class]="classImagem" class="cor-fundo-login">
+		<div fxFlexOffset="55" fxFlex="40" style="background-color: rgb(255, 255, 255, 0.7);">
+			<div fxFill fxLayout="column" fxLayoutAlign="start center">
+				<div fxFill fxFlex="8px" class="cor-fundo-login"></div>
+				<div fxFill fxLayout="row" fxFlex="25" fxLayoutAlign="space-around center">
+					<img [src]="logo" class="img-logo" />
+					<img [src]="logoPersonalizado" class="img-logo-personalizado" />
+				</div>
+				<div fxFill fxLayout="column" fxFlex fxLayoutGap="20px" class="espacamento-lateral">
+					<mat-form-field>
+						<mat-label class="label color-primary-300">Login</mat-label>
+						<input matInput />
+					</mat-form-field>
+					<div fxLayout="column">
+						<mat-form-field>
+							<mat-label class="label color-primary-300">Senha</mat-label>
+							<input matInput type="password" />
+						</mat-form-field>
+
+						<div fxFill fxLayout="column" fxFlex fxLayoutAlign="start end">
+							<mat-checkbox class="label color-primary-300">Manter me conectado</mat-checkbox>
+
+							<button
+								mat-raised-button
+								color="primary"
+								class="button-custom"
+								(click)="onLoginClick()"
+							>
+								Entrar
+							</button>
+						</div>
+					</div>
+					<mat-divider class="divider-custom"></mat-divider>
+					<div fxLayout="column" fxFlex fxLayoutAlign="end center">
+						<div class="publicacao-custom">Publicaçao: 23/11/2018 17:00</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div fxFlex></div>
+	</div>
+</div>

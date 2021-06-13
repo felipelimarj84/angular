@@ -1,0 +1,149 @@
+.div-menu {
+	margin: 0 -58px 25px 0;
+}
+
+.div-dados {
+	margin: 12px 0 12px 0;
+}
+
+.div-promissoria {
+	margin-top: 20px;
+}
+
+.btn-ntf-mn {
+	width: 100px;
+	height: 30px;
+	border-radius: 4px;
+	opacity: 1;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0;
+	opacity: 1;
+	line-height: 0;
+	margin-right: 10px;
+}
+
+.btn-promissoria-mn {
+	width: 127px;
+	height: 30px;
+	border-radius: 4px;
+	opacity: 1;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0;
+	opacity: 1;
+	line-height: 0;
+	margin-right: 10px;
+}
+
+.btn-notificacoes-mn {
+	width: 192px;
+	height: 43px;
+	border-radius: 4px;
+	opacity: 1;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0;
+	opacity: 1;
+	line-height: 0;
+	margin: 20px 0 20px 0;
+}
+
+.img-avatar-mn {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	object-fit: cover;
+	margin: 0 10px 0 10px;
+}
+
+.txt-usuario-mn {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+}
+
+.txt-titulo-mn {
+	font-size: 16px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+}
+
+.txt-email-mn {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+	color: #9b9b9b;
+}
+
+.txt-vencimento-mn {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+	margin-left: 10px;
+	color: #50c733;
+}
+
+.vencido-mn {
+	color: #ff7171;
+}
+
+.txt-valor-mn {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.txt-itens-mn {
+	font-size: 14px;
+	letter-spacing: 0;
+	opacity: 1;
+	margin: 18px 0 18px 0;
+	cursor: pointer;
+}
+
+.arrow_box {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #655b9d69;
+	margin-top: 10px;
+	-webkit-box-shadow: 7px 7px 23px -8px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 7px 7px 23px -8px rgba(0, 0, 0, 0.75);
+	box-shadow: 7px 7px 23px -8px rgba(0, 0, 0, 0.75);
+	border-radius: 6px;
+	padding: 20px 20px 0 20px;
+}
+
+.arrow_box:after,
+.arrow_box:before {
+	bottom: 100%;
+	left: 85%;
+	border: solid transparent;
+	content: ' ';
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 15px;
+	margin-left: -15px;
+}
+
+.arrow_box:before {
+	border-color: rgba(101, 91, 157, 0);
+	border-bottom-color: #655b9d69;
+	border-width: 16px;
+	margin-left: -16px;
+}

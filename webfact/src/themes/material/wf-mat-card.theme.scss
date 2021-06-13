@@ -1,0 +1,9 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/theming';
+
+@mixin wf-mat-card-theme($theme) {
+	mat-card.mat-card:not([class*='mat-elevation-z']) {
+		box-shadow: none;
+		border-radius: 8px;
+	}
+}

@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayoutAlign="center center" [class]="'div-menu ' + (theme$ | async)">
+	<div fxLayout="column" fxFlex="315px" fxLayoutAlign="center center" class="arrow_box">
+		<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="div-dados">
+			<div
+				fxLayout="row"
+				fxLayoutAlign="center center"
+				mat-card-avatar
+				class="img-avatar-mc border-color-primary-mc"
+			>
+				<mat-icon color="primary">person</mat-icon>
+			</div>
+			<div fxLayout="column" fxLayoutAlign="center start">
+				<span class="txt-usuario-mc color-primary-mc"> Ricardo Almeida</span>
+				<span class="txt-email-mc">ricardo@rgb.com.br</span>
+				<span class="txt-tipo-usuario-mc">Administrador</span>
+			</div>
+		</div>
+		<div fxLayout="row" fxFlexFill class="border-top-color-primary-100-mc"></div>
+		<div fxLayout="column" fxLayoutAlign="center start" fxFlexFill>
+			<span class="txt-itens-mc color-primary-400-mc" routerLink="usuarios">Lista de Usuários</span>
+			<div fxLayout="row" fxFlexFill class="border-top-color-primary-100-mc"></div>
+			<span class="txt-itens-mc color-primary-400-mc" routerLink="configurar-pagina"
+				>Configurar página</span
+			>
+			<div fxLayout="row" fxFlexFill class="border-top-color-primary-100-mc"></div>
+			<span class="txt-itens-mc color-primary-400-mc" (click)="onLogoutClick()">Sair do sistema</span>
+		</div>
+	</div>
+</div>

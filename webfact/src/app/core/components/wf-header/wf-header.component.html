@@ -1,0 +1,61 @@
+<div fxLayout="row" fxFlexFill>
+
+	<div fxLayout="row" fxLayoutAlign="start center" fxFlex="58%">
+		<img [src]="logo" class="img-logo" />
+
+		<div *ngIf="(dadosUsuario$ | async) as dadosUsuario">
+
+			<div *ngIf="dadosImagem$ | async as imagem">
+				<div *ngIf="imagem">
+					<img [src]="imagem" class="img-logo-personalizado" />
+				</div>
+			</div>
+
+			<span class="txt-dados color-primary" color="primary">Dados atualizados em:
+				{{ dadosUsuario.datalogo | date: 'dd/MM/yyyy' }}</span>
+		</div>
+
+
+	</div>
+
+	<div fxLayout="row" fxLayoutAlign="space-evenly center" fxFlex="calc(100vh - 58%)">
+		<div *ngIf="isAuthenticated" fxLayout="row">
+			<div fxLayout="column" fxLayoutAlign="center start">
+				<div fxLayout="row" fxLayoutAlign="start center">
+					<span class="txt-msg color-primary">Bem vindo,</span>
+					<span class="txt-usuario color-primary"> Ricardo Almeida</span>
+				</div>
+				<span class="txt-email">ricardo@rgb.com.br</span>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="center center" mat-card-avatar class="img-avatar border-color-primary">
+				<mat-icon color="primary">person</mat-icon>
+			</div>
+		</div>
+
+		<div *ngIf="!isAuthenticated">
+			<button mat-button mat-stroked-button color="primary" (click)="onLoginClick()">
+				Entrar
+			</button>
+		</div>
+		<div fxLayout="row" mat-card-avatar>
+			<button mat-icon-button class="img-notification" [matMenuTriggerFor]="menuNotification">
+				<mat-icon matBadge="4" matBadgePosition="before" matBadgeColor="warn"
+					class="icon-notification color-primary-300">notifications</mat-icon>
+			</button>
+		</div>
+
+		<div fxLayout="row" fxLayoutAlign="center center">
+			<span class="txt-msg color-primary-400 cursor" [matMenuTriggerFor]="menuConfiguracoes">Configurações</span>
+			<button mat-icon-button [matMenuTriggerFor]="menuConfiguracoes">
+				<mat-icon class="icon-settings color-primary-300">settings</mat-icon>
+			</button>
+		</div>
+	</div>
+</div>
+
+<mat-menu #menuConfiguracoes="matMenu" class="mat-menu-transparent">
+	<app-wf-menu-configuracao></app-wf-menu-configuracao>
+</mat-menu>
+<mat-menu #menuNotification="matMenu" xPosition="after" class="mat-menu-transparent">
+	<app-wf-menu-notification></app-wf-menu-notification>
+</mat-menu>

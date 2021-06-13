@@ -1,0 +1,23 @@
+<mat-drawer-container class="background-primary-50" autosize hasBackdrop="false" fxFlexFill>
+	<mat-drawer
+		#drawer
+		class="drawer"
+		[ngClass]="{ drawer: !drawerFull, 'drawer-full': drawerFull }"
+		mode="over"
+		position="end"
+	>
+		<div fxLayout="column">
+			<div fxLayout="row" fxLayoutAlign="end start">
+				<button mat-button class="btn-new" (click)="close()">
+					<mat-icon class="icon-close">close</mat-icon>
+					<span>Fechar</span>
+				</button>
+			</div>
+			<router-outlet></router-outlet>
+		</div>
+	</mat-drawer>
+
+	<div class="drawer-content">
+		<app-list-usuario></app-list-usuario>
+	</div>
+</mat-drawer-container>

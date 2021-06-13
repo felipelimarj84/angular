@@ -1,0 +1,5 @@
+$wf-azul-primary: mat-palette($mat-wf-azul);
+$wf-azul-accent: mat-palette($mat-light-blue);
+$wf-azul-warn: mat-palette($mat-red, 600);
+
+$wf-azul-theme: mat-light-theme($wf-azul-primary, $wf-azul-accent, $wf-azul-warn);

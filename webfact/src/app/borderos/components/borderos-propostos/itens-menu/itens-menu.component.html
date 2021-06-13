@@ -1,0 +1,40 @@
+<mat-drawer-container class="background-primary-50" autosize hasBackdrop="false" fxFlexFill>
+	<mat-drawer
+		#drawer
+		class="drawer"
+		[ngClass]="{ drawer: !drawerFull, 'drawer-full': drawerFull }"
+		mode="over"
+		position="end"
+	>
+		<div fxLayout="column">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-drawer>
+
+	<div class="drawer-content background-primary-50">
+		<div class="content background-primary-50">
+			<div fxLayout="row" fxLayoutAlign="end center" fxFlexFill>
+				<button mat-button class="btn-close" (click)="close()">
+					<mat-icon>close</mat-icon>
+					<span class="ml-5">Fechar</span>
+				</button>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="center center">
+				<mat-tab-group animationDuration="0ms" [selectedIndex]="id$ | async">
+					<mat-tab label="Títulos">
+						<app-titulos></app-titulos>
+					</mat-tab>
+					<mat-tab label="Liberações">
+						<app-liberacoes></app-liberacoes>
+					</mat-tab>
+					<mat-tab label="Imprime Duplicatas">
+						<app-imprime-duplicatas></app-imprime-duplicatas>
+					</mat-tab>
+					<mat-tab label="Enviar NFe">
+						<app-enviar-nfe></app-enviar-nfe>
+					</mat-tab>
+				</mat-tab-group>
+			</div>
+		</div>
+	</div>
+</mat-drawer-container>

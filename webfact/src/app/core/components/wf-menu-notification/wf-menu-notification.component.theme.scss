@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+@mixin wf-menu-notification-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	.color-primary-mn {
+		color: mat-color($primary);
+	}
+
+	.color-primary-400-mn {
+		color: mat-color($primary, 400);
+	}
+
+	.border-color-primary-mn {
+		border: 1px solid mat-color($primary);
+	}
+
+	.border-top-color-primary-100-mn {
+		border-top: 1px solid mat-color($primary, 100);
+	}
+
+	.btn-background-primary-300-mn {
+		background-color: mat-color($primary, 300);
+	}
+
+	.btn-background-primary-A200-mn {
+		background-color: mat-color($primary, A200);
+	}
+}

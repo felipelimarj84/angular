@@ -1,0 +1,17 @@
+<mat-drawer-container class="background-primary-50" autosize hasBackdrop="false" fxFlexFill>
+	<mat-drawer #drawer class="drawer" mode="over" position="end">
+		<div fxLayout="column">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-drawer>
+
+	<div class="drawer-content">
+		<div class="content">
+			<div fxLayout="column" fxLayoutAlign="center start">
+				<span class="txt-titulo color-primary">Renovação</span>
+			</div>
+
+			<div fxLayout="row" fxLayoutAlign="center center" class="div-content-lib"></div>
+		</div>
+	</div>
+</mat-drawer-container>

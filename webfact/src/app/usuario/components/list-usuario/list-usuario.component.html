@@ -1,0 +1,61 @@
+<div class="content">
+
+	<div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill class="div-topo">
+		<div fxLayout="column" fxLayoutAlign="start start">
+			<span class="txt-titulo color-primary">Lista de Usuários</span>
+		</div>
+		<div fxLayout="column" fxLayoutAlign="center end">
+			<button mat-button class="btn-new btn-background-primary" routerLink="form-usuario" (click)="novoUsuario()">
+				<span>Novo Usuário</span>
+			</button>
+		</div>
+	</div>
+
+	<div *ngIf="(dadosListaUsuarios$ | async) as dadosListaUsuarios">
+		<div fxLayout="row" *ngFor="let lista of dadosListaUsuarios" fxLayoutAlign="start start" class="div-conteudo">
+			<div fxLayout="column" fxLayoutAlign="center space-between" fxFlexFill>
+				<mat-card class="border-card" fxFlex="0 0 74px">
+					<div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+						<div fxLayout="row" fxFlex="25">
+
+
+							<div *ngIf="!lista.foto" fxLayout="row" fxLayoutAlign="center center" mat-card-avatar
+								class="img-avatar border-color-primary">
+								<mat-icon color="primary">person</mat-icon>
+							</div>
+
+							<div *ngIf="lista.foto" fxLayout="row" fxLayoutAlign="center center" mat-card-foto
+								class="img-avatar border-color-primary">
+								<img src='data:image/jpeg;base64,{{ lista.foto }}' class="foto">
+
+							</div>
+
+
+
+							<div fxLayout="column" fxLayoutAlign="center start">
+								<span class="txt-usuario color-primary"> {{ lista.usuario }}</span>
+								<span class="txt-email">{{ lista.email }}</span>
+							</div>
+						</div>
+
+						<div fxLayout="column" fxLayoutAlign="left left"  fxFlex="55">
+							<span class="txt-label color-primary">Nome do Usuário</span>
+							<span class="txt-label color-primary"> {{ lista.nome }}</span>
+						</div>
+
+						<div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="end center" fxFlex="45">
+							<button mat-icon-button type="button" class="btn-padrao editar" title="Editar" [routerLink]="['form-usuario', lista.usuario]" (click)="novoUsuario()">
+								<mat-icon class="icon">edit</mat-icon>
+							</button>
+							<button type="button" mat-icon-button class="btn-padrao excluir" title="Excluir" (click)="ExcluirUsuario(lista.usuario)">
+								<mat-icon class="icon">delete</mat-icon>
+							</button>
+						</div>
+					</div>
+				</mat-card>
+			</div>
+		</div>
+
+	</div>
+
+</div>

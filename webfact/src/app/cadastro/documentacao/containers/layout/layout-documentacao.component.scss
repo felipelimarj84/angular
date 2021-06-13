@@ -1,0 +1,31 @@
+.content {
+	margin: 25px;
+
+	.txt-titulo {
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: 0;
+		opacity: 1;
+	}
+
+	.div-content-lib {
+		margin-top: 20px;
+		background-color: #fff;
+		min-height: calc(100vh - 185px) !important;
+		border: 1px solid #cbc8cf;
+	}
+}
+
+// .drawer {
+// 	min-width: 590px;
+// }
+
+.drawer-full {
+	min-width: 100%;
+	position: fixed;
+	margin-top: 85px;
+}
+
+.mat-drawer-inner-container {
+	position: absolute !important;
+}

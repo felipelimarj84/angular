@@ -1,0 +1,132 @@
+<div fxLayout="column" class="div-geral">
+	<div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill class="mb-20">
+		<span class="txt-titulo color-primary">Importa Títulos</span>
+		<button mat-button class="btn-close" (click)="close()">
+			<mat-icon>close</mat-icon>
+			<span class="ml-5">Fechar</span>
+		</button>
+	</div>
+
+	<div class="div-interna">
+		<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="mb-20">
+			<span class="txt-subtitulo color-primary-300">Padrão do arquivo de importação</span>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="20px">
+			<div fxLayout="column" fxLayoutAlign="center space-between" fxFlex="50" class="mb-5">
+				<span class="txt-item bold color-primary">Duplicatas</span>
+			</div>
+			<div fxLayout="column" fxLayoutAlign="center space-between" fxFlex="50">
+				<span class="txt-item bold color-primary">RGB</span>
+			</div>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="15px" class="mb-20">
+			<div fxLayout="column" fxLayoutAlign="center space-between" fxFlex="50">
+				<mat-card class="border-primary-200 background-primary-50" fxFlex="0 0 50px">
+					<div fxLayout="row" fxLayoutAlign="space-between center">
+						<mat-radio-group fxLayout="row" fxFlexFill color="primary" fxLayoutGap="25px">
+							<mat-radio-button value="1" class="txt-item bold color-primary-300"
+								>RGB</mat-radio-button
+							>
+							<mat-radio-button value="2" class="txt-item bold color-primary-300"
+								>Bradesco</mat-radio-button
+							>
+							<mat-radio-button value="3" class="txt-item bold color-primary-300"
+								>CNAB Padrão</mat-radio-button
+							>
+						</mat-radio-group>
+					</div>
+				</mat-card>
+			</div>
+			<div fxLayout="column" fxLayoutAlign="center space-between" fxFlex="50">
+				<mat-card class="border-primary-200 background-primary-50" fxFlex="0 0 50px">
+					<div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+						<div fxLayout="row" fxLayoutAlign="space-between center">
+							<mat-radio-group fxLayout="row" fxFlexFill color="primary" fxLayoutGap="25px">
+								<mat-radio-button value="1" class="txt-item bold color-primary-300"
+									>RGB</mat-radio-button
+								>
+								<mat-radio-button value="2" class="txt-item bold color-primary-300"
+									>Bradesco</mat-radio-button
+								>
+							</mat-radio-group>
+						</div>
+					</div>
+				</mat-card>
+			</div>
+		</div>
+		<div fxLayout="row" class="mb-20">
+			<div fxLayout="column">
+				<mat-checkbox class="txt-chk color-primary-300" color="primary"
+					>Importa Seu Número (Nosso número bancário)
+				</mat-checkbox>
+			</div>
+		</div>
+
+		<div fxLayout="column">
+			<div
+				fxLayout="row"
+				fxLayoutAlign="space-between end"
+				fxFlexFill
+				class="pb-5 border-bottom-primary-200"
+			>
+				<span class="txt-item normal color-primary-300">Selecione o arquivo:</span>
+				<button mat-button class="btn-arquivo color-primary background-primary-50 border-primary-200">
+					<span>Selecione</span>
+				</button>
+			</div>
+			<span class="txt-exemplo pt-5 mb-20">Ex.: colocar tipo de arquivos</span>
+		</div>
+
+		<div fxLayout="column" class="mb-20">
+			<div fxLayout="row" fxLayoutAlign="space-between end" fxFlexFill>
+				<span class="txt-subtitulo color-primary-300">Arquivos Salvos</span>
+				<button
+					mat-button
+					class="btn-verifica color-primary background-primary-50 border-primary-200"
+				>
+					<span>Verificar Arquivo</span>
+				</button>
+			</div>
+		</div>
+
+		<div fxLayout="column" fxLayoutAlign=" stretch" class="mb-20">
+			<mat-card class="border-primary-200 p-20">
+				<div fxLayout="column">
+					<div
+						fxLayout="row"
+						fxLayoutAlign="space-between start"
+						fxFlexFill
+						class="pb-5 mb-5 border-bottom-primary-200"
+					>
+						<span class="txt-item bold color-primary-300 pt-15">Arquivo1.xml</span>
+						<button mat-icon-button class="btn-padrao excluir" title="Excluir">
+							<mat-icon class="icon">delete</mat-icon>
+						</button>
+					</div>
+				</div>
+				<div fxLayout="column">
+					<div
+						fxLayout="row"
+						fxLayoutAlign="space-between start"
+						fxFlexFill
+						class="pb-5 mb-5 border-bottom-primary-200"
+					>
+						<span class="txt-item bold color-primary-300 pt-15">Arquivo1.xml</span>
+						<button mat-icon-button class="btn-padrao excluir" title="Excluir">
+							<mat-icon class="icon">delete</mat-icon>
+						</button>
+					</div>
+				</div>
+			</mat-card>
+		</div>
+
+		<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="30px">
+			<button mat-button class="btn-cancelar">
+				<span>Cancelar</span>
+			</button>
+			<button mat-button class="btn-salvar">
+				<span>Salvar</span>
+			</button>
+		</div>
+	</div>
+</div>

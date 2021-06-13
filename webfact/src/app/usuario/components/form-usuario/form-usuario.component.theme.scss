@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+
+@mixin form-usuario-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	app-form-usuario {
+		.color-primary {
+			color: mat-color($primary);
+		}
+
+		.color-primary-300 {
+			color: mat-color($primary, 300);
+		}
+
+		.background-primary-300 {
+			background-color: mat-color($primary, 300);
+		}
+
+		.background-primary-50 {
+			background-color: mat-color($primary, 50);
+		}
+
+		.mat-checkbox .mat-checkbox-frame {
+			border-color: mat-color($primary, 300) !important;
+		}
+
+		.mat-checkbox .mat-checkbox-frame {
+			border-width: 1px;
+		}
+	}
+}

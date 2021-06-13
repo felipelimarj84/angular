@@ -1,0 +1,42 @@
+@import '~@angular/material/theming';
+
+@mixin importa-titulos-xml-component-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	app-importa-titulos-xml {
+		.color-primary {
+			color: mat-color($primary);
+		}
+
+		.color-primary-300 {
+			color: mat-color($primary, 300);
+		}
+
+		.background-primary-50 {
+			background-color: mat-color($primary, 50);
+		}
+
+		.border-primary-200 {
+			border: 1px solid mat-color($primary, 200);
+		}
+
+		.border-bottom-primary-200 {
+			border-bottom: 1px solid mat-color($primary, 200);
+		}
+
+		.mat-radio-outer-circle {
+			border-width: 1px;
+			border-color: mat-color($primary, 300) !important;
+		}
+
+		.mat-checkbox .mat-checkbox-frame {
+			border-width: 1px;
+		}
+
+		.mat-checkbox .mat-checkbox-frame {
+			border-color: mat-color($primary, 300) !important;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+<!-- -->
+
+<mat-card class="border-card">
+	<mat-card-content>
+		<div fxLayout="row" fxLayoutAlign="start" fxFlexFill>
+			<div fxLayout="column" fxFlex="70">
+				<a class="txt-color-primary txt-titulo bold">
+					Limite de Crédito
+				</a>
+				<a class="txt-color-primary txt-valor bold">{{ valor | currency: 'BRL' }}</a>
+
+				<div fxLayout="row">
+					<div fxLayout="column" fxLayoutAlign="center end">
+						<a class="txt-color-primary txt-descricao">Fixado em </a>
+						<a class="txt-color-primary txt-descricao">Vencimento </a>
+					</div>
+					<div fxLayout="column" fxLayoutAlign="center center">
+						<span class="txt-color-primary txt-descricao bold">
+							{{ fixado | date: 'dd/MM/yyyy' }}</span
+						>
+						<span class="txt-color-warn txt-descricao bold">
+							{{ vencimento | date: 'dd/MM/yyyy' }}</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<div fxLayout="column" fxFlex="30">
+				<div fxLayout="row" fxLayoutAlign="center center">
+					<div class="chart-wrapper">
+						<canvas
+							height="112px"
+							width="150px"
+							baseChart
+							[datasets]="barChartData"
+							[labels]="barChartLabels"
+							[options]="barChartOptions"
+							[plugins]="barChartPlugins"
+							[legend]="barChartLegend"
+							[chartType]="barChartType"
+							(chartClick)="chartClicked($event)"
+						>
+						</canvas>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</mat-card-content>
+</mat-card>

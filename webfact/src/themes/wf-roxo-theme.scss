@@ -1,0 +1,5 @@
+$wf-roxo-primary: mat-palette($mat-wf-roxo);
+$wf-roxo-accent: mat-palette($mat-light-blue);
+$wf-roxo-warn: mat-palette($mat-red, 600);
+
+$wf-roxo-theme: mat-light-theme($wf-roxo-primary, $wf-roxo-accent, $wf-roxo-warn);

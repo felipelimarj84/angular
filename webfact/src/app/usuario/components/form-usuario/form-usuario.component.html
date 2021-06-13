@@ -1,0 +1,273 @@
+<div *ngIf="dadosUsuario$ | async">
+	<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+		<div fxLayout="column" class="div-geral">
+
+
+			<div fxLayout="row" fxLayoutAlign="center center" fxFlexFill>
+				<span class="txt-titulo color-primary">Cadastro de Usuário</span>
+			</div>
+
+			<div *ngIf="listaErros  && listaErros.length > 0">
+				<mat-card class="card-alert mb-20" fxLayout="row" fxLayoutAlign="left left">
+					<div fxLayout="row" fxLayoutAlign="left" fxFlexFill>
+						<ul>
+							<li class="txt-alert">
+								:( Ops! Verifique os erros abaixo.
+							</li>
+							<li class="txt-alert-erro" *ngFor="let erro of listaErros">
+								{{erro}}
+							</li>
+						</ul>
+					</div>
+					<div fxLayout="row" (click)="fecharErros()" class="icon-fechar">
+						<mat-icon svgIcon="fechar"></mat-icon>
+					</div>
+				</mat-card>
+			</div>
+
+
+
+			<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="div-subtitulo">
+				<span class="txt-subtitulo color-primary-300">Defina um nome de usuário:</span>
+			</div>
+
+			<div formGroupName="DadosComplementares">
+				<div fxLayout="column" fxLayoutAlign="start start" fxFlexFill class="div-topo">
+					<div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill fxLayoutGap="20px">
+
+
+						<div fxLayout="column" fxFlex="50">
+							<mat-form-field>
+								<mat-label class="label color-primary-300">Login</mat-label>
+								<input matInput formControlName="login" [readonly]="paramlogin ? true : false" />
+							</mat-form-field>
+						</div>
+
+						<div fxLayout="column" fxFlex="50">
+							<mat-form-field>
+								<mat-label class="label color-primary-300">Email</mat-label>
+								<input matInput formControlName="email" />
+							</mat-form-field>
+						</div>
+					</div>
+
+					<div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill fxLayoutGap="20px">
+						<div fxLayout="column" fxFlex="100">
+							<mat-form-field>
+								<mat-label class="label color-primary-300">Nome</mat-label>
+								<input matInput formControlName="nome" />
+							</mat-form-field>
+						</div>
+					</div>
+
+
+					<div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill fxLayoutGap="20px">
+						<div fxLayout="column" fxFlex="60">
+
+							<button type="button" mat-button class="btn-config color-primary-300" (click)="fileType.click()">
+								<mat-icon svgIcon="logomarca" class="img-icon"></mat-icon>
+								<span>Incluir Logomarca</span>
+							</button>
+
+							<input accept="image/*" type="file" id="file" (change)="onChange($event)" hidden="true"
+								#fileType />
+
+						</div>
+
+						<div fxLayout="column" fxFlex="20" *ngIf="dadosImagem$ | async as imagem">
+							<div *ngIf="!imagem">
+								<img src='data:image/jpeg;base64,{{ foto }}' class="fotourl">
+							</div>
+
+							<div *ngIf="imagem">
+								<img [src]="imagem" class="fotourl">
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+
+			<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="div-subtitulo">
+				<span class="txt-subtitulo color-primary-300">Defina as permissões do usuário:</span>
+			</div>
+			<div fxLayout="column" fxLayoutAlign="start start" fxFlexFill>
+				<div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill class="div-padrao"
+					fxLayoutGap="30px">
+					<div fxLayout="column" fxFlex="50">
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web1">Consulta
+							Títulos Vencidos
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web2">Consulta
+							Títulos a Vencer
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web3">Consulta
+							Títulos Pagos
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web4">Consulta
+							Títulos Renegociados
+						</mat-checkbox>
+					</div>
+					<div fxLayout="column" fxFlex="50">
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web5">Consulta
+							Extrato de C/C Cliente
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web16">Extrato
+							de
+							C/C Completo
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web10">
+							Impressão de
+							Contrato Mãe
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web30">
+							Visualiza
+							Críticas (Vencidos)
+						</mat-checkbox>
+					</div>
+				</div>
+				<div fxLayout="row" fxFlexFill class="div-padrao background-primary-50">
+					<div fxLayout="column">
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web6">Proposta
+							(Digitação De Cheques e
+							Duplicatas) On-Line</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web20">Inclui
+							Cheque </mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web21"> Inclui
+							Duplicata
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web31">Desconto
+							em
+							Duplicata
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web17">Mostra
+							Previsão do Líquido nos
+							Borderôs Propostos</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web7">Consultas
+							Novos Borderôs / Rejeição
+							de Propostas
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web11">
+							Impressão de
+							Borderô Normal
+							Analítico</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web12">
+							Impressão de
+							Aditivo ao Contrato-Mãe
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web13">
+							Impressão de
+							Carta aos Sacados
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web14">
+							Impressão de
+							Nota Promissória
+						</mat-checkbox>
+					</div>
+				</div>
+
+				<div fxLayout="row" fxLayoutAlign="space-between start" fxFlexFill class="div-padrao"
+					fxLayoutGap="30px">
+					<div fxLayout="column">
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web9">
+							Instruções de
+							Cobrança (Prorrgação,
+							Abatimento, etc…
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web22">
+							Prorrogar</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-50" color="primary"
+							formControlName="web22b">
+							Prorrogar Títulos Vencidos
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web23">
+							Abater</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web24">
+							Cancelar Abatimento
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web25">
+							Protestar</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web26">
+							Sustar Protesto
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web15b">
+							Impressão de Boleto de
+							Proposta</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web27">
+							Antecipação</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web28">
+							Baixar</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web29">
+							Retirada</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300 space-25" color="primary"
+							formControlName="web15">
+							Impressão de Boleto
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="weB37">
+							Impressão de
+							Boleto vencido
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web34">Altera
+							Sacado</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web33">
+							Impressão de
+							Duplicatas
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web8">Consulta
+							de
+							Pagamentos em Formato de
+							Arquivo Padrão CNAB-RGBsys-Retorno
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary"
+							formControlName="digitaDanfeTitulo">
+							Digitação manual da danfe (Cadastro
+							de títulos)
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary"
+							formControlName="grandesoperacoes">
+							Grandes Operações (Não Realiza
+							Críticas)
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web19">
+							Documentos
+							Pendentes</mat-checkbox>
+					</div>
+				</div>
+
+				<div fxLayout="row" fxFlexFill class="div-padrao background-primary-50">
+					<div fxLayout="column">
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web35">
+							Liberações
+						</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="web32">Recibo
+							de
+							Recompra</mat-checkbox>
+						<mat-checkbox class="txt-chk color-primary-300" color="primary" formControlName="weB38">Permitir
+							finalizar proposta sem
+							liberação
+						</mat-checkbox>
+					</div>
+				</div>
+				<div fxLayout="row" fxFlexFill class="div-padrao" fxLayoutAlign="center center" fxLayoutGap="30px">
+					<button type="button" mat-button class="btn-cancelar">
+						<span>Cancelar</span>
+					</button>
+					<button type="submit" mat-button class="btn-salvar">
+						<span>Salvar</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

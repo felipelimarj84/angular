@@ -1,0 +1,92 @@
+<div fxLayout="column" fxFlexFill class="content">
+	<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="30px" class="mb-20">
+		<mat-radio-group fxLayout="row" fxLayoutAlign="center center" color="primary" fxLayoutGap="35px">
+			<mat-radio-button value="1" class="txt-item color-primary-300"
+				>Como Duplicata Mercantil</mat-radio-button
+			>
+			<mat-radio-button value="2" class="txt-item color-primary-300"
+				>Como Duplicata de Serviços</mat-radio-button
+			>
+		</mat-radio-group>
+		<button mat-button class="btn-imprimir background-primary-300">
+			<mat-icon svgIcon="printer"></mat-icon>
+			<span class="ml-15">Imprimir Marcados</span>
+		</button>
+	</div>
+	<div fxLayout="row" fxLayoutAlign="center center">
+		<table mat-table [dataSource]="dataSource">
+			<ng-container matColumnDef="check">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					<mat-checkbox class="txt-chk color-primary-300" color="primary"></mat-checkbox>
+				</th>
+				<td mat-cell *matCellDef="let element">
+					<mat-checkbox class="txt-chk color-primary-300" color="primary"></mat-checkbox>
+				</td>
+			</ng-container>
+			<ng-container matColumnDef="marca">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Marca
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.marca }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="sequencial">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Sequencial
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.sequencial }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="duplicata">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					Duplicata
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.duplicata }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="cnpj">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+					CNPJ
+				</th>
+				<td mat-cell *matCellDef="let element">{{ element.cnpj }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="vencimento">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">Vencimento</th>
+				<td mat-cell *matCellDef="let element">{{ element.vencimento }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="sacado">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">Sacado</th>
+				<td mat-cell *matCellDef="let element">{{ element.sacado }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="desconto">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">Desconto</th>
+				<td mat-cell *matCellDef="let element">{{ element.desconto }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="valor">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">Valor</th>
+				<td mat-cell *matCellDef="let element">{{ element.valor }}</td>
+			</ng-container>
+
+			<ng-container matColumnDef="options">
+				<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary"></th>
+				<td mat-cell *matCellDef="let element">
+					<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+						<button mat-icon-button class="btn-padrao border-primary-200">
+							<mat-icon class="icon-itens color-primary-300" svgIcon="printer"></mat-icon>
+						</button>
+					</div>
+				</td>
+			</ng-container>
+
+			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+		</table>
+	</div>
+	<!-- <div fxLayout="row" fxLayoutAlign="end center" class="div-paginator">
+		<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+	</div> -->
+</div>

@@ -1,0 +1,114 @@
+<div fxLayout="column" fxFlexFill class="content">
+	<div fxLayout="column">
+		<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="15px">
+			<mat-checkbox class="txt-chk color-primary-300" color="primary"
+				>Sintetiza por Data e Classificação Empresa:</mat-checkbox
+			>
+			<mat-form-field>
+				<mat-select class="txt-select">
+					<mat-option>CRESCER</mat-option>
+					<mat-option>FIDC</mat-option>
+					<mat-option>PARTICIP</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<span class="span-txt color-primary-300">Cedente:<b> TEMPO</b></span>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="15px" class="mt-10">
+			<div fxLayout="column" fxFlexFill>
+				<mat-card
+					fxLayout="row"
+					fxLayoutAlign="space-between center"
+					class="border-primary-200 background-primary-50"
+					fxFlex="0 0 55px"
+				>
+					<mat-radio-group color="primary" fxLayoutGap="25px">
+						<mat-radio-button value="1" class="txt-item color-primary-300"
+							>5 dias</mat-radio-button
+						>
+						<mat-radio-button value="2" class="txt-item color-primary-300"
+							>15 dias
+						</mat-radio-button>
+						<mat-radio-button value="3" class="txt-item color-primary-300"
+							>30 dias</mat-radio-button
+						>
+						<mat-radio-button value="4" class="txt-item color-primary-300"
+							>60 dias
+						</mat-radio-button>
+						<mat-radio-button value="5" class="txt-item color-primary-300"
+							>90 dias</mat-radio-button
+						>
+						<mat-radio-button value="6" class="txt-item color-primary-300"
+							>Completo</mat-radio-button
+						>
+					</mat-radio-group>
+					<div fxLayout="row" fxLayoutGap="20px">
+						<button mat-icon-button class="btn-padrao border-primary-200">
+							<mat-icon class="icon-itens color-primary-300" svgIcon="printer"></mat-icon>
+						</button>
+						<button mat-icon-button class="btn-padrao border-primary-200">
+							<mat-icon class="icon-itens color-primary-300" svgIcon="download"></mat-icon>
+						</button>
+					</div>
+				</mat-card>
+			</div>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="center center" class="mt-20">
+			<table mat-table [dataSource]="dataSource">
+				<ng-container matColumnDef="data">
+					<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+						Data
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.data }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="descricao">
+					<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+						Descrição
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.descricao }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="complemento">
+					<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+						Complemento
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.complemento }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="debito">
+					<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+						Débito
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.debito }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="credito">
+					<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+						Crédito
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.credito }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="saldo">
+					<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+						Saldo
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.saldo }}</td>
+				</ng-container>
+
+				<ng-container matColumnDef="empresa">
+					<th mat-header-cell *matHeaderCellDef class="cel-titulo color-primary">
+						Empresa
+					</th>
+					<td mat-cell *matCellDef="let element">{{ element.empresa }}</td>
+				</ng-container>
+
+				<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+				<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+			</table>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="end center" class="div-paginator">
+			<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+		</div>
+	</div>
+</div>

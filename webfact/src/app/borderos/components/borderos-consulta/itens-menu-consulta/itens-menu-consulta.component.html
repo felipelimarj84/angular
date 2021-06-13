@@ -1,0 +1,46 @@
+<mat-drawer-container class="background-primary-50" autosize hasBackdrop="false" fxFlexFill>
+	<mat-drawer
+		#drawer
+		class="drawer"
+		[ngClass]="{ drawer: !drawerFull, 'drawer-full': drawerFull }"
+		mode="over"
+		position="end"
+	>
+		<div fxLayout="column">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-drawer>
+
+	<div class="drawer-content background-primary-50">
+		<div class="content background-primary-50">
+			<div fxLayout="row" fxLayoutAlign="end center" fxFlexFill>
+				<button mat-button class="btn-close" (click)="close()">
+					<mat-icon>close</mat-icon>
+					<span class="ml-5">Fechar</span>
+				</button>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="center center">
+				<mat-tab-group animationDuration="0ms" [selectedIndex]="id$ | async">
+					<mat-tab label="Relatório Aditivo">
+						<app-relatorio-aditivo></app-relatorio-aditivo>
+					</mat-tab>
+					<mat-tab label="Relatório Borderô">
+						<app-relatorio-bordero></app-relatorio-bordero>
+					</mat-tab>
+					<mat-tab label="Carta Sacado">
+						<app-carta-sacado></app-carta-sacado>
+					</mat-tab>
+					<mat-tab label="Nota Promissória">
+						<app-nota-promissoria></app-nota-promissoria>
+					</mat-tab>
+					<mat-tab label="Recibo de Regresso">
+						<app-recibo-regresso></app-recibo-regresso>
+					</mat-tab>
+					<mat-tab label="Impressão de Duplicatas">
+						<app-imprime-duplicatas-consulta></app-imprime-duplicatas-consulta>
+					</mat-tab>
+				</mat-tab-group>
+			</div>
+		</div>
+	</div>
+</mat-drawer-container>
